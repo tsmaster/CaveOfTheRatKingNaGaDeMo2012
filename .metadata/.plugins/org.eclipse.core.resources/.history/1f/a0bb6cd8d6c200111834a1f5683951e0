@@ -1,0 +1,190 @@
+package com.bigdicegames.nagademo2012.core.modes;
+
+import static playn.core.PlayN.graphics;
+
+import java.util.ArrayList;
+
+import com.bigdicegames.nagademo2012.core.Party;
+import com.bigdicegames.nagademo2012.core.characters.BaseCharacter;
+import com.bigdicegames.nagademo2012.core.ui.Panel;
+import com.bigdicegames.nagademo2012.core.ui.PushButton;
+import com.bigdicegames.nagademo2012.core.ui.PushButton.ButtonCallback;
+import com.bigdicegames.nagademo2012.core.util.BoundingBox4i;
+
+import playn.core.Canvas;
+import playn.core.CanvasImage;
+import playn.core.GroupLayer;
+import playn.core.ImageLayer;
+import playn.core.Mouse.ButtonEvent;
+import playn.core.Pointer.Event;
+import playn.core.TextFormat.Alignment;
+import playn.core.TextFormat;
+import playn.core.TextLayout;
+
+public class PartyStatsMode implements GameMode {
+	private static final int BUTTON_WIDTH = 150;
+	private static final int BUTTON_HEIGHT = 100;
+	PushButton okButton;
+	private CanvasImage bgImage;
+	private ImageLayer bgImageLayer;
+	private GroupLayer groupLayer;
+	private int backgroundColor;
+	private String alertText;
+	private int bgWidth;
+	private int bgHeight;
+	private ArrayList<Panel> namePanels;
+	private ArrayList<Panel> xpPanels;
+	private ArrayList<Panel> levelPanels;
+	private ArrayList<PushButton> gearButtons;
+	
+	public PartyStatsMode() {
+		bgWidth = Math.min(graphics().width(), 1000);
+		bgHeight = Math.min(graphics().height(), 600);
+
+		bgImage = graphics().createImage(bgWidth, bgHeight);
+		bgImageLayer = graphics().createImageLayer(bgImage);
+		int bgX = (graphics().width() - bgWidth) / 2;
+		int bgY = (graphics().height() - bgHeight) / 2;
+		bgImageLayer.setTranslation(bgX, bgY);
+		
+		int left = (graphics().width() - BUTTON_WIDTH)/2;
+		int top = bgY + bgHeight - BUTTON_HEIGHT;
+		int right = left + BUTTON_WIDTH;
+		int bottom = top + BUTTON_HEIGHT;
+		
+		okButton = new PushButton("Done", new BoundingBox4i(left, top, right, bottom), new ButtonCallback(){
+			@Override
+			public void onClicked() {
+				ModeMgr.get().popMode(PartyStatsMode.this);
+			}});
+		
+		groupLayer = graphics().createGroupLayer();
+		groupLayer.add(bgImageLayer);
+		groupLayer.add(okButton.getLayer());
+		
+		namePanels = new ArrayList<Panel>();
+		xpPanels = new ArrayList<Panel>();
+		levelPanels = new ArrayList<Panel>();
+		gearButtons = new ArrayList<PushButton>();
+		
+		int w = bgWidth / 3;
+		int h = bgHeight  / 8;
+		
+		for (int i = 0; i < 3; ++i) {
+			final int index = i;
+			namePanels.add(new Panel("name", new BoundingBox4i(bgX + w*i, BUTTON_HEIGHT, bgX + w*(i+1), BUTTON_HEIGHT+h)));
+			xpPanels.add(new Panel("xp", new BoundingBox4i(bgX + w*i, BUTTON_HEIGHT+h, bgX + w*(i+1), BUTTON_HEIGHT+2*h)));
+			levelPanels.add(new Panel("level", new BoundingBox4i(bgX + w*i, BUTTON_HEIGHT+2*h, bgX + w*(i+1), BUTTON_HEIGHT+3*h)));
+			gearButtons.add(new PushButton("gear", new BoundingBox4i(bgX + w*i, BUTTON_HEIGHT+3*h, bgX + w*(i+1), BUTTON_HEIGHT+4*h), 
+					new ButtonCallback() {
+						@Override
+						public void onClicked() {
+							gearButtonClicked(index);
+						}}));
+		}
+		for (Panel p:namePanels) {
+			groupLayer.add(p.getLayer());
+		}
+		for (Panel p:xpPanels) {
+			groupLayer.add(p.getLayer());
+		}
+		for (Panel p:levelPanels) {
+			groupLayer.add(p.getLayer());
+		}
+		for (PushButton b:gearButtons) {
+			groupLayer.add(b.getLayer());
+		}
+		updateUI();
+		setBackgroundColor(0xd0404040).setAlertText("Party Stats").render();
+	}
+	
+	private void updateUI() {
+		ArrayList<BaseCharacter> characters = Party.get().getCharacters();
+		for (int i=0; i< 3; ++i) {
+			BaseCharacter c = characters.get(i);
+			namePanels.get(i).setText(c.getName());
+			xpPanels.get(i).setText("xp:"+c.getExperiencePoints());
+			levelPanels.get(i).setText("level:"+c.getLevel());
+		}
+	}
+
+	protected void gearButtonClicked(int i) {
+		ModeMgr.get().pushMode(new GearMode(i));
+	}
+
+	public PartyStatsMode setBackgroundColor(int color) {
+		this.backgroundColor = color;
+		return this;
+	}
+	
+	public PartyStatsMode setAlertText(String text) {
+		this.alertText = text;
+		return this;
+	}
+	
+	public void render() {
+		Canvas c = bgImage.canvas();
+		c.clear();
+		c.setFillColor(backgroundColor);
+		c.fillRect(0, 0, bgWidth, bgHeight);
+		c.setFillColor(0xffffffff);
+		TextFormat format = new TextFormat().withAlignment(Alignment.CENTER).withWrapWidth(bgWidth*.75f);
+		TextLayout layout = graphics().layoutText(alertText, format);
+		c.fillText(layout, (bgWidth-layout.width())/2.0f, layout.height());
+	}
+	
+
+	@Override
+	public void onPopped() {
+		graphics().rootLayer().remove(groupLayer);
+	}
+
+	@Override
+	public void onPushed() {
+		graphics().rootLayer().add(groupLayer);
+	}
+
+	@Override
+	public void onUpdate(float deltaSeconds) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPaint(float alpha) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onMouseDown(ButtonEvent event) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPointerStart(Event event) {
+		if (okButton.tryClick(event)) {
+			return;
+		}
+		
+		for (PushButton b:gearButtons) {
+			if (b.tryClick(event)) {
+				return;
+			}
+		}
+	}
+
+	@Override
+	public void onBecomeTop() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onKeyDown(playn.core.Keyboard.Event event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

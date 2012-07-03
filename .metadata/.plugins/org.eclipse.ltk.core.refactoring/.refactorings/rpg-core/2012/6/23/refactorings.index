@@ -1,0 +1,6 @@
+1338741931497	Rename method 'setWorldPosition'
+1338823484711	Move compilation unit
+1338823495351	Move compilation unit
+1339255147532	Change method 'PathFindJob'
+1339268083828	Rename type 'BoundingBox'
+1339279691592	Rename local variable 'tileToWorld'

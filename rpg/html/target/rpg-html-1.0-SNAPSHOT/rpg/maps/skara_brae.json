@@ -1,0 +1,18 @@
+{
+  "lines": [
+    "WWWWWWWWWWWW",
+    "WWWWGGGGWWWW",
+    "WWGGGGPGGGWW",
+    "WGGGSGGGHGGW",
+    "WGGGGGGMGGGW",
+    "WWGGGGGGGGGW",
+    "WWWWWGGGGGWW",
+    "WWWWWWWEWWWW"
+  ],
+  "S" : "Shop",
+  "P" : "Pub",
+  "H" : "Healer",
+  "G" : "Grass",
+  "W" : "Wall",
+  "E" : "Exit"
+}

@@ -1,0 +1,31 @@
+{
+  "lines": [
+    "............",
+    ".E...M......",
+    ".M..M.MM....",
+    ".M..M..M....",
+    ".M..M..M....",
+    ".M..M..M.MMM",
+    "..MMM...MMMD",
+    "..........M."
+  ],
+  
+  "objects": [{"type": "portal",
+               "name": "skara brae",
+               "dest_x": 8,
+               "dest_y": 5,
+               "map_marker": "E",
+               "icon": "city"},
+              {"type": "portal",
+               "name": "dungeon",
+               "dest_x": 2,
+               "dest_y": 1,
+               "map_marker": "D",
+               "icon": "city"}
+               ],
+
+   "random_encounters": [{"name": "rats_2",
+                          "map_name": "combat cave",
+                          "frequency": 0.15}]
+  
+}

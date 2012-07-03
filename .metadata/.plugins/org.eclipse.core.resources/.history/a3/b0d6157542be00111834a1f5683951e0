@@ -1,0 +1,62 @@
+package com.bigdicegames.nagademo2012.core;
+
+import java.util.ArrayList;
+
+import com.bigdicegames.nagademo2012.core.characters.BaseCharacter;
+
+public class Party {
+	
+	private static Party singleton;
+	private ArrayList<BaseCharacter> characters;
+	private int gold;
+	private ArrayList<InventoryObject> inventory;
+	private MapLocator worldPosn;
+	private MapLocator respawnPosn;
+
+	private Party() {
+		characters = new ArrayList<BaseCharacter>();
+		inventory = new ArrayList<InventoryObject>();
+	}
+
+	public static Party get() {
+		if (singleton == null) {
+			singleton = new Party();
+		}
+		return singleton;
+	}
+	
+	public ArrayList<BaseCharacter> getCharacters() {
+		return characters;
+	}
+	
+	public void addCharacter(BaseCharacter record) {
+		characters.add(record);
+	}
+	
+	public void addExperience(int experience) {
+		int aliveCount = 0;
+		for (BaseCharacter c : characters) {
+			if (c.isAlive()) {
+				aliveCount += 1;
+			}
+		}
+		if (aliveCount == 0) {
+			return;
+		}
+		
+		int perCharacter = experience / aliveCount;
+		for (BaseCharacter c : characters) {
+			if (c.isAlive()) {
+				c.addExperiencePoints(perCharacter);
+			}
+		}
+	}
+
+	public void addGold(int gold) {
+		this.gold += gold;
+	}
+	
+	public int getGold() {
+		return gold;
+	}
+}

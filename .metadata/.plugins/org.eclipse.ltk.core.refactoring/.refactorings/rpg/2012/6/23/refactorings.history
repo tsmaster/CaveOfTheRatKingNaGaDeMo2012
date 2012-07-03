@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;island.json&apos; to &apos;maps&apos;&#x0A;- Original project: &apos;rpg&apos;&#x0A;- Destination element: &apos;maps&apos;&#x0A;- Original element: &apos;island.json&apos;" description="Copy file" element1="core/target/classes/com/bigdicegames/nagademo2012/resources/maps/island.json" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1338735315892" target="/rpg/core/target/classes/com/bigdicegames/nagademo2012/resources/maps" units="0" version="1.0"/>
+</session>

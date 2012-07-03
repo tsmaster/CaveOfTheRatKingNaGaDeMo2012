@@ -1,0 +1,128 @@
+package com.bigdicegames.nagademo2012.core;
+
+import static playn.core.PlayN.graphics;
+import static playn.core.PlayN.keyboard;
+import static playn.core.PlayN.log;
+import static playn.core.PlayN.mouse;
+import static playn.core.PlayN.pointer;
+import playn.core.Game;
+import playn.core.Keyboard;
+import playn.core.Mouse;
+import playn.core.Pointer;
+
+import com.bigdicegames.nagademo2012.core.InventoryObject.InventoryProto;
+import com.bigdicegames.nagademo2012.core.characters.FighterCharacter;
+import com.bigdicegames.nagademo2012.core.characters.MageCharacter;
+import com.bigdicegames.nagademo2012.core.characters.RangerCharacter;
+import com.bigdicegames.nagademo2012.core.map.MapMgr;
+import com.bigdicegames.nagademo2012.core.modes.AlertMode;
+import com.bigdicegames.nagademo2012.core.modes.ModeMgr;
+import com.bigdicegames.nagademo2012.core.modes.SplashScreenMode;
+import com.bigdicegames.nagademo2012.core.modes.WalkAboutMode;
+
+public class Rpg implements Game {
+//  private RandomTourMode tourMode;
+//  private HoppingGuyMode hoppingGuyMode;
+	private WalkAboutMode walkAboutMode;
+private boolean oneTimeSetup;
+
+@Override
+  public void init() {
+    int sw = graphics().width();
+    int sh = graphics().height();
+    log().info("screen size: "+sw+","+sh);
+    MapMgr.get().setWindow(0, 0, sw, sh);
+    
+    
+    MapMgr.get().load("overland", "maps/concave_island.json");
+    MapMgr.get().load("skara brae", "maps/skarabrae.json");
+    MapMgr.get().load("ratskellar", "maps/ratskellar.json");
+    MapMgr.get().load("dungeon", "maps/dungeon.json");
+    MapMgr.get().load("combat cave", "maps/combat_cave.json");
+    MapMgr.get().load("combat grass", "maps/combat_grass.json");
+    MapMgr.get().load("combat sand", "maps/combat_sand.json");
+    
+    Party.get().addCharacter(new FighterCharacter()
+    	.setName("Frodo")
+    	.setArmorProto(InventoryProto.INV_CLOTH_ARMOR)
+    	.setWeaponProto(InventoryProto.INV_SWORD));
+    Party.get().addCharacter(new MageCharacter()
+		.setName("Evro")
+    	.setArmorProto(InventoryProto.INV_CLOTH_ARMOR)
+    	.setWeaponProto(InventoryProto.INV_STAFF));
+    Party.get().addCharacter(new RangerCharacter()
+		.setName("Lando")
+    	.setArmorProto(InventoryProto.INV_CLOTH_ARMOR)
+    	.setWeaponProto(InventoryProto.INV_BOW));
+    oneTimeSetup = true;
+
+    //tourMode = new RandomTourMode(gameMap);
+    //ModeMgr.get().pushMode(tourMode);
+    //hoppingGuyMode = new HoppingGuyMode(gameMap);
+    //ModeMgr.get().pushMode(hoppingGuyMode);
+    
+    if (mouse() != null) {
+    	mouse().setListener(new Mouse.Adapter() {
+    		@Override
+    		public void onMouseDown(Mouse.ButtonEvent event) {
+    			ModeMgr.get().onMouseDown(event);
+    		}
+    	});
+    } 
+    if (pointer() != null) {
+    	pointer().setListener(new Pointer.Adapter() {
+    		@Override
+    		public void onPointerStart(Pointer.Event event) {
+    			ModeMgr.get().onPointerStart(event);
+    		}
+    	});
+    }
+    if (keyboard() != null) {
+    	keyboard().setListener(new Keyboard.Adapter() {
+    		@Override
+    		public void onKeyDown(Keyboard.Event event) {
+    			ModeMgr.get().onKeyDown(event);
+    		}
+    	});
+    }
+  }
+
+@Override
+  public void paint(float alpha) {
+	ModeMgr.get().onPaint(alpha);
+  }
+
+  @Override
+  public void update(float deltaMs) {
+	  ModeMgr.get().onUpdate(deltaMs / 1000.0f);
+	  
+	  if (oneTimeSetup && MapMgr.get().allParsed()) {
+		  oneTimeSetup = false;
+		  
+	      MapMgr.get().goToMapAndSpawn("overland");
+	    
+  	      graphics().rootLayer().add(MapMgr.get().getLayer());
+  	      walkAboutMode = new WalkAboutMode();
+  	      ModeMgr.get().pushMode(walkAboutMode);
+
+  	      String welcomeText="Welcome, Adventurer!\n \nYou are about to step into the world of the NaGaDeMo!\n \n"
+  	    		  + "This is an exercise in game development, an effort to make a game in one month, the "
+  	    		  + "month of June, 2012. Development (code, design, and graphics) was done by Dave LeCompte.\n \n"
+  	    		  + "It is in part an effort to demonstrate the capabilities of the PlayN game framework.\n \n"
+  	    		  + "https://developers.google.com/playn/";
+  	      AlertMode welcome = new AlertMode()
+  	      	.setAlertText(welcomeText)
+  	      	.setBackgroundColor(0xff404080);
+  	      welcome.render();
+  	      ModeMgr.get().pushMode(welcome);
+  	      
+  	      SplashScreenMode title = new SplashScreenMode("images/titleScreen.png");
+  	      ModeMgr.get().pushMode(title);
+	  }
+  }
+
+  @Override
+  public int updateRate() {
+    return 25;
+  }
+}

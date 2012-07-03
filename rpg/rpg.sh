@@ -1,0 +1,1 @@
+mvn -Pjava test

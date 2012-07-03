@@ -1,0 +1,137 @@
+package com.bigdicegames.nagademo2012.core.map.mapobjects.combat;
+
+import static playn.core.PlayN.graphics;
+import static playn.core.PlayN.log;
+import playn.core.PlayN;
+
+import com.bigdicegames.nagademo2012.core.CameraMgr;
+import com.bigdicegames.nagademo2012.core.map.LongRunningJob;
+import com.bigdicegames.nagademo2012.core.map.MapMgr;
+import com.bigdicegames.nagademo2012.core.math.Vec2f;
+import com.bigdicegames.nagademo2012.core.ui.Panel;
+import com.bigdicegames.nagademo2012.core.util.BoundingBox4i;
+
+public class AttackJob implements LongRunningJob {
+	enum Result {
+		CRITICAL_HIT,
+		HIT,
+		DEFLECTED,
+		MISSED,
+		CRITICAL_MISS
+	};
+	
+	enum DisplayState {
+		ROLL,
+		DISPLAY_RESULT,
+		DISPLAY_DAMAGE
+	};
+
+	private static final float DISPLAY_DURATION = 1.0f;
+
+	private Combatant attacker;
+	private Combatant defender;
+	private boolean isComplete;
+	private Panel resultsPanel;
+	private DisplayState displayState;
+	private Result result;
+	private int damage;
+	private float displayTime;
+	
+
+	public AttackJob(Combatant attacker, Combatant defender) {
+		this.attacker = attacker;
+		this.defender = defender;
+		isComplete = false;
+		resultsPanel = new Panel("result", new BoundingBox4i(0, 0, 200, 25));
+		displayState = DisplayState.ROLL;
+	}
+
+	@Override
+	public void update(float deltaSeconds) {
+		CameraMgr.get().update(deltaSeconds);
+		Vec2f camPos = CameraMgr.get().getPos();
+		MapMgr.get().getCurrentMap().setCameraPosition(camPos.x, camPos.y);
+		
+		switch (displayState) {
+		case ROLL:
+			int attackerToHit = attacker.getToHit();
+			int defenderArmorClass = defender.getArmorClass();
+			
+			result = rollHit(attackerToHit, defenderArmorClass);
+			resultsPanel.setText(result.toString());
+			displayTime = 0.0f;
+			displayState = DisplayState.DISPLAY_RESULT;
+			graphics().rootLayer().add(resultsPanel.getLayer());
+			log().info("Hit? "+result);
+			if (result == Result.CRITICAL_HIT || result == Result.HIT) {
+				int attackerDamageDieSize = attacker.getDamageDieSize();
+				log().info("Attacker rolls a d"+attackerDamageDieSize);
+				damage = rollDamage(attackerDamageDieSize);
+				log().info("Attacker rolls "+damage);
+				log().info("Defender's HP "+defender.getCurrentHitPoints());
+				resultsPanel.setBackgroundColor(0x80B00000);
+			} else {
+				resultsPanel.setBackgroundColor(0x80444444);
+			}
+			break;
+		case DISPLAY_RESULT:
+			displayTime += deltaSeconds;
+			if (displayTime > DISPLAY_DURATION) {
+				if (result == Result.CRITICAL_HIT || result == Result.HIT) {
+					resultsPanel.setText("Hit for "+damage+" points")
+						.setBackgroundColor(0xBBFF0000);
+					displayTime = 0.0f;
+					displayState = DisplayState.DISPLAY_DAMAGE;
+					defender.addHitPoints(-damage);
+				} else {
+					graphics().rootLayer().remove(resultsPanel.getLayer());
+					isComplete = true;
+				}
+			}
+			break;
+		case DISPLAY_DAMAGE:
+			displayTime += deltaSeconds;
+			if (displayTime > DISPLAY_DURATION) {
+				graphics().rootLayer().remove(resultsPanel.getLayer());
+				isComplete = true;
+			}
+			break;
+		}
+	}
+
+	private int rollDamage(int attackerDamageDieSize) {
+		int roll = (int) (PlayN.random()*attackerDamageDieSize) + 1;
+		return roll;
+	}
+
+	private Result rollHit(int attackerToHit, int defenderArmorClass) {
+		int roll = (int)(PlayN.random() * 20) + 1;
+		if (roll == 1) {
+			return Result.CRITICAL_HIT;
+		}
+		if (roll == 20) {
+			return Result.CRITICAL_MISS;
+		}
+		if (roll > attackerToHit) {
+			return Result.MISSED;
+		}
+		int target = attackerToHit - defenderArmorClass;
+		if  (roll > target) {
+			return Result.DEFLECTED;
+		}
+		return Result.HIT;
+	}
+
+	@Override
+	public boolean isComplete() {
+		// TODO Auto-generated method stub
+		return isComplete;
+	}
+
+	@Override
+	public void onPaint(float alpha) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

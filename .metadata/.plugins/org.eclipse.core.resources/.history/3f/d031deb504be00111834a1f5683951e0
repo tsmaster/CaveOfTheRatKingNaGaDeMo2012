@@ -1,0 +1,38 @@
+package com.bigdicegames.nagademo2012.core.map.mapobjects.combat;
+
+import com.bigdicegames.nagademo2012.core.characters.BaseCharacter;
+
+public class PlayerCharacter extends Combatant {
+	private BaseCharacter character;
+
+	public PlayerCharacter(BaseCharacter cr) {
+		super(cr.getIconFilename());
+		setAffiliation(Affiliation.PLAYER);
+		this.character = cr;
+	}
+	
+	@Override
+	public int getToHit() {
+		return character.getToHit();
+	}
+	
+	@Override
+	public int getArmorClass() {
+		return character.getArmorType().armorClass;
+	}
+
+	@Override
+	public int getDamageDieSize() {
+		return character.getWeaponType().damageDie;
+	}
+	
+	@Override
+	public int getBaseHitPoints() {
+		return character.getMaxHitPoints();
+	}
+	
+	public int getCurrentHitPoints() {
+		return character.getCurrentHitPoints();
+	}
+	
+}

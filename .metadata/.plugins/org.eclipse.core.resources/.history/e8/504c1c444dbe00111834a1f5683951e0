@@ -1,0 +1,96 @@
+package com.bigdicegames.nagademo2012.core.map;
+
+import static playn.core.PlayN.log;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class PathFindJob implements LongRunningJob {
+	private ArrayList<Location> closedLocs;
+	private ArrayList<Location> openLocs;
+	private HashMap<Location, Location> previousLocations;
+	private Location destLoc;
+	private boolean isComplete;
+	private ArrayList<Location> path;
+	
+	public PathFindJob(Location startLoc, Location destLoc) {
+		this.closedLocs = new ArrayList<Location>();
+		this.openLocs = new ArrayList<Location>();
+		this.previousLocations = new HashMap<Location, Location>();
+		this.previousLocations.put(startLoc, null);
+		this.openLocs.add(startLoc);
+		this.destLoc = destLoc;
+		this.isComplete = false;
+		this.path = null;
+	}
+
+	@Override
+	public void update(float deltaSeconds) {
+		if (openLocs.size() == 0) {
+			isComplete = true;
+			path = null;
+			return;
+		}
+		Location thisLoc = openLocs.remove(0);
+		log().info("removing "+thisLoc.getTileLocationString());
+		closedLocs.add(thisLoc);
+		
+		if (thisLoc == destLoc) {
+			isComplete = true;
+			makePath();
+			debugPrintPath();
+			return;
+		}
+		
+		
+		for (Location neighborLoc : thisLoc.getNeighbors()) {
+			if (neighborLoc.getTile().getType() == Tile.TileType.WATER) {
+				continue;
+			}
+			if (closedLocs.contains(neighborLoc) || openLocs.contains(neighborLoc)) {
+				continue;
+			}
+			previousLocations.put(neighborLoc, thisLoc);
+			openLocs.add(neighborLoc);
+			log().info("adding "+neighborLoc.getTileLocationString());
+		}
+	}
+
+	@Override
+	public boolean isComplete() {
+		return isComplete;
+	}
+	
+	public ArrayList<Location> getPath() {
+		return path;
+	}
+	
+	private void makePath() {
+		path = new ArrayList<Location>();
+		path.add(destLoc);
+		while (true) {
+			Location loc = previousLocations.get(path.get(0));
+			if (loc == null) {
+				return;
+			}
+			path.add(0, loc);
+		}
+	}
+	
+	private void debugPrintPath() {
+		String s = "";
+		for (Location loc : path) {
+			if (s.length() > 0 ) {
+				s += " -> ";
+			}
+			s += String.valueOf(loc.tileX) + ", " + String.valueOf(loc.tileY);
+		}
+		log().info(s);
+	}
+
+	@Override
+	public void onPaint(float alpha) {
+		// TODO Auto-generated method stub
+		
+	}
+}

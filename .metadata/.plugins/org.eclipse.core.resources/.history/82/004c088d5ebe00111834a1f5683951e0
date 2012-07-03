@@ -1,0 +1,26 @@
+{
+  "lines": [
+    "GGGGGGGGGGGG",
+    "GGGGGGGGGGGG",
+    "SSSSSSSSSSSS",
+    "SSSSSSSSSSSS",
+    "SSSSSSSSSSSS",
+    "SSSSSSSSSSSS",
+    "SSSSSSSSSSSS",
+    "SSSSSSSSSSSS",
+    "SSSSSSSSSSSS",
+    "............",
+    "............"
+  ],
+  
+  "objects": [{"type": "exit",
+               "map_marker": "E",
+               "icon": "road"},
+              {"type": "player spawn",
+               "map_marker": "P",
+               "icon": "grass"},
+              {"type": "enemy spawn",
+               "map_marker": "S",
+               "icon": "grass"}
+               ]
+}

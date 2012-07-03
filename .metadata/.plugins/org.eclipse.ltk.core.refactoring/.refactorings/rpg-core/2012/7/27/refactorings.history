@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;canvasLayer&apos; in &apos;com.bigdicegames.nagademo2012.core.modes.SplashScreenMode&apos; to &apos;blankLayer&apos;&#x0A;- Original project: &apos;rpg-core&apos;&#x0A;- Original element: &apos;com.bigdicegames.nagademo2012.core.modes.SplashScreenMode.canvasLayer&apos;&#x0A;- Renamed element: &apos;com.bigdicegames.nagademo2012.core.modes.SplashScreenMode.blankLayer&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;canvasLayer&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src\/main\/java&lt;com.bigdicegames.nagademo2012.core.modes{SplashScreenMode.java[SplashScreenMode^canvasLayer" name="blankLayer" references="true" setter="false" stamp="1341239087730" textual="false" version="1.0"/>
+</session>

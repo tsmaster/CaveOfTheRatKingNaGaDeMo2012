@@ -1,0 +1,50 @@
+package com.bigdicegames.nagademo2012.core.modes;
+
+import playn.core.Mouse.ButtonEvent;
+import playn.core.Pointer.Event;
+
+public class ShopMode implements GameMode {
+
+	@Override
+	public void onPopped() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPushed() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onUpdate(float deltaSeconds) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPaint(float alpha) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onMouseDown(ButtonEvent event) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPointerStart(Event event) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onBecomeTop() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

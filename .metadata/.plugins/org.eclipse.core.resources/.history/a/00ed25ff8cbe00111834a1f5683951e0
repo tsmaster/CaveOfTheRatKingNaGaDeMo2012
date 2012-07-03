@@ -1,0 +1,45 @@
+{
+  "lines": [
+    "..........................",
+    "....S1SS.........SSS......",
+    "..SSSSSSSS.....SSSGSS1....",
+    ".SSG3GGG3SS....SGG3GGS....",
+    ".SSGGGGMGSSSSSSSGGMGGSS...",
+    "..SSSSGGGGGGGGGG3GGSS2S...",
+    ".....1SSSSSSSSSSSSSS..S...",
+    ".........................."
+  ],
+  
+  "objects": [{"type": "combat",
+               "name": "rat man",
+               "map_name": "combat sand",
+               "map_marker": "1",
+               "icon": "sand"},
+              {"type": "portal",
+               "name": "skara brae",
+               "dest_x" : 2,
+               "dest_y" : 2,
+               "map_marker": "2",
+               "icon": "city"},
+              {"type": "combat",
+               "name": "rat king",
+               "map_name": "combat sand",
+               "icon": "road",
+               "map_marker": "5"},
+              {"type": "combat",
+               "name": "rat man",
+               "map_name": "combat grass",
+               "map_marker": "3",
+               "icon": "grass"}               
+               ],
+               
+   "random_encounters": [{"name": "rats_1",
+                          "map_name": "combat grass",
+                          "frequency": .1}]
+               
+   "spawn_pos": {"x": 10,
+                 "y": 4},
+               
+   "respawn_pos": {"x": 7,
+                   "y": 4}
+}

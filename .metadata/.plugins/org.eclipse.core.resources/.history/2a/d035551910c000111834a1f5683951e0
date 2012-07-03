@@ -1,0 +1,118 @@
+package com.bigdicegames.nagademo2012.core.modes;
+
+import static playn.core.PlayN.graphics;
+
+import com.bigdicegames.nagademo2012.core.ui.PushButton;
+import com.bigdicegames.nagademo2012.core.ui.PushButton.ButtonCallback;
+import com.bigdicegames.nagademo2012.core.util.BoundingBox4i;
+
+import playn.core.Canvas;
+import playn.core.CanvasImage;
+import playn.core.GroupLayer;
+import playn.core.ImageLayer;
+import playn.core.TextFormat;
+import playn.core.TextLayout;
+import playn.core.Mouse.ButtonEvent;
+import playn.core.Pointer.Event;
+import playn.core.TextFormat.Alignment;
+
+public class HealerMode implements GameMode {
+
+	private static final int BUTTON_WIDTH = 100;
+	private static final int BUTTON_HEIGHT = 80;
+	private int bgWidth;
+	private int bgHeight;
+	private ImageLayer bgImageLayer;
+	private PushButton okButton;
+	private GroupLayer groupLayer;
+	private int backgroundColor;
+	private CanvasImage bgImage;
+	private String alertText;
+
+	@Override
+	public void onPopped() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPushed() {
+		bgWidth = Math.min(graphics().width(), 1000);
+		bgHeight = Math.min(graphics().height(), 600);
+
+		bgImage = graphics().createImage(bgWidth, bgHeight);
+		bgImageLayer = graphics().createImageLayer(bgImage);
+		int bgX = (graphics().width() - bgWidth) / 2;
+		int bgY = (graphics().height() - bgHeight) / 2;
+		bgImageLayer.setTranslation(bgX, bgY);
+		
+		int left = (graphics().width() - BUTTON_WIDTH)/2;
+		int top = bgY + bgHeight - BUTTON_HEIGHT;
+		int right = left + BUTTON_WIDTH;
+		int bottom = top + BUTTON_HEIGHT;
+		
+		okButton = new PushButton("OK", new BoundingBox4i(left, top, right, bottom), new ButtonCallback(){
+			@Override
+			public void onClicked() {
+				ModeMgr.get().popMode(HealerMode.this);
+			}});
+		
+		groupLayer = graphics().createGroupLayer();
+		groupLayer.add(bgImageLayer);
+		groupLayer.add(okButton.getLayer());
+		
+		this.setBackgroundColor(0xff808040)
+			.setAlertText("Your party has been healed.");
+	}
+	
+	public HealerMode setBackgroundColor(int color) {
+		this.backgroundColor = color;
+		return this;
+	}
+	
+	public HealerMode setAlertText(String text) {
+		this.alertText = text;
+		return this;
+	}
+	
+	public void render() {
+		Canvas c = bgImage.canvas();
+		c.clear();
+		c.setFillColor(backgroundColor);
+		c.fillRect(0, 0, bgWidth, bgHeight);
+		c.setFillColor(0xffffffff);
+		TextFormat format = new TextFormat().withAlignment(Alignment.CENTER).withWrapWidth(bgWidth*.75f);
+		TextLayout layout = graphics().layoutText(alertText, format);
+		c.fillText(layout, (bgWidth-layout.width())/2.0f, (bgHeight-layout.height())/2.0f);
+	}
+
+	@Override
+	public void onUpdate(float deltaSeconds) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPaint(float alpha) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onMouseDown(ButtonEvent event) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPointerStart(Event event) {
+		okButton.tryClick(event);
+	}
+
+	@Override
+	public void onBecomeTop() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

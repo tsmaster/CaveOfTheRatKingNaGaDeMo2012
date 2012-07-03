@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="35" version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1016" x="1541" y="158">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="199"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="168" y="30"/>
+<coolItem id="com.google.gdt.eclipse.suite.GDTPulldownToolbar" itemType="typeToolBarContribution" x="48" y="30"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="adt.actionSet.avdManager" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="adt.actionSet.lint" itemType="typeToolBarContribution" x="48" y="30"/>
+<coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="96" y="30"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="132" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="152" y="30"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.m2e.editor.MavenPomEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1338642997911" focus="true" label="Workspace - Java">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+<part id="30"/>
+<part id="31"/>
+<part id="32"/>
+<part id="33"/>
+<part id="34"/>
+<part id="35"/>
+<part id="36"/>
+<part id="37"/>
+<part id="38"/>
+<part id="39"/>
+<part id="40"/>
+<part id="41"/>
+<part id="42"/>
+<part id="43"/>
+<part id="44"/>
+<part id="45"/>
+<part id="46"/>
+<part id="47"/>
+<part id="48"/>
+<part id="49"/>
+<part id="50"/>
+<part id="51"/>
+<part id="52"/>
+<part id="53"/>
+<part id="54"/>
+<part id="55"/>
+<part id="56"/>
+<part id="57"/>
+<part id="58"/>
+<part id="59"/>
+<part id="60"/>
+<part id="61"/>
+<part id="62"/>
+<part id="63"/>
+<part id="64"/>
+<part id="65"/>
+<part id="66"/>
+<part id="67"/>
+<part id="68"/>
+<part id="69"/>
+<part id="70"/>
+<part id="71"/>
+<part id="72"/>
+<part id="73"/>
+<part id="74"/>
+<part id="75"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Rpg.java" partName="Rpg.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/Rpg.java" title="Rpg.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/Rpg.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/Rpg.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="122" selectionOffset="4282" selectionTopPixel="1099"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Tile.java" partName="Tile.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/Tile.java" title="Tile.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/Tile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/Tile.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="857" selectionTopPixel="229"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ModeMgr.java" partName="ModeMgr.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/ModeMgr.java" title="ModeMgr.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/ModeMgr.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/ModeMgr.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="426" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GameMode.java" partName="GameMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/GameMode.java" title="GameMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/GameMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/GameMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="420" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RandomTourMode.java" partName="RandomTourMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/RandomTourMode.java" title="RandomTourMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/RandomTourMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/RandomTourMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="232" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GameMap.java" partName="GameMap.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/GameMap.java" title="GameMap.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/GameMap.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/GameMap.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="36" selectionOffset="166" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Location.java" partName="Location.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/Location.java" title="Location.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/Location.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/Location.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1979" selectionTopPixel="619"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MapObject.java" partName="MapObject.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/MapObject.java" title="MapObject.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/MapObject.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/MapObject.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="450" selectionOffset="589" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Vec2f.java" partName="Vec2f.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/math/Vec2f.java" title="Vec2f.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/Vec2f.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/Vec2f.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="110" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Mouse.class" partName="Mouse.class" title="Mouse.class" tooltip="playn.core.Mouse" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=rpg-core/\/home\/tsmaster\/.m2\/repository\/com\/googlecode\/playn\/playn-core\/1.3.1\/playn-core-1.3.1.jar&lt;playn.core(Mouse.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="923" selectionTopPixel="75"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Vec2i.java" partName="Vec2i.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/math/Vec2i.java" title="Vec2i.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/Vec2i.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/Vec2i.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="225" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CameraMgr.java" partName="CameraMgr.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/CameraMgr.java" title="CameraMgr.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/CameraMgr.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/CameraMgr.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1280" selectionTopPixel="171"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Interpolator.java" partName="Interpolator.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/Interpolator.java" title="Interpolator.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/Interpolator.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/Interpolator.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="63" selectionOffset="118" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LinearInterpolator.java" partName="LinearInterpolator.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/LinearInterpolator.java" title="LinearInterpolator.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/LinearInterpolator.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/LinearInterpolator.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="214" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EaseInInterpolator.java" partName="EaseInInterpolator.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/EaseInInterpolator.java" title="EaseInInterpolator.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/EaseInInterpolator.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/EaseInInterpolator.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="231" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EaseOutInterpolator.java" partName="EaseOutInterpolator.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/EaseOutInterpolator.java" title="EaseOutInterpolator.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/EaseOutInterpolator.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/math/interpolate/EaseOutInterpolator.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="235" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WalkAboutMode.java" partName="WalkAboutMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/WalkAboutMode.java" title="WalkAboutMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/WalkAboutMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/WalkAboutMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1536" selectionTopPixel="85"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MapHopJob.java" partName="MapHopJob.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/MapHopJob.java" title="MapHopJob.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/MapHopJob.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/MapHopJob.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1229" selectionTopPixel="469"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PathFindJob.java" partName="PathFindJob.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/PathFindJob.java" title="PathFindJob.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/PathFindJob.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/PathFindJob.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1157" selectionTopPixel="85"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiHopJob.java" partName="MultiHopJob.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/MultiHopJob.java" title="MultiHopJob.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/MultiHopJob.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/MultiHopJob.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1460" selectionTopPixel="180"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PortalMapObject.java" partName="PortalMapObject.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/PortalMapObject.java" title="PortalMapObject.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/PortalMapObject.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/PortalMapObject.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="643" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MapMgr.java" partName="MapMgr.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/MapMgr.java" title="MapMgr.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/MapMgr.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/MapMgr.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="2615" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BoundingBox4f.java" partName="BoundingBox4f.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/util/BoundingBox4f.java" title="BoundingBox4f.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/util/BoundingBox4f.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/util/BoundingBox4f.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="531" selectionOffset="79" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BoundingBox4i.java" partName="BoundingBox4i.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/util/BoundingBox4i.java" title="BoundingBox4i.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/util/BoundingBox4i.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/util/BoundingBox4i.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="670" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RatKing.java" partName="RatKing.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/RatKing.java" title="RatKing.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/RatKing.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/RatKing.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="212" selectionOffset="327" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="skarabrae.json" partName="skarabrae.json" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/skarabrae.json" title="skarabrae.json" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/skarabrae.json" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/skarabrae.json"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="869" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="concave_island.json" partName="concave_island.json" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/concave_island.json" title="concave_island.json" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/concave_island.json" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/concave_island.json"/>
+<editorState selectionHorizontalPixel="0" selectionLength="144" selectionOffset="1064" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="dungeon.json" partName="dungeon.json" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/dungeon.json" title="dungeon.json" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/dungeon.json" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/dungeon.json"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="886" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CombatMapMarker.java" partName="CombatMapMarker.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/CombatMapMarker.java" title="CombatMapMarker.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/CombatMapMarker.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/CombatMapMarker.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="473" selectionTopPixel="2"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WaitForCommand.java" partName="WaitForCommand.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/WaitForCommand.java" title="WaitForCommand.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/WaitForCommand.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/WaitForCommand.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1188" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Moving.java" partName="Moving.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/Moving.java" title="Moving.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/Moving.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/Moving.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="205" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PlayerCharacter.java" partName="PlayerCharacter.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/PlayerCharacter.java" title="PlayerCharacter.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/PlayerCharacter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/PlayerCharacter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="565" selectionTopPixel="34"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Enemy.java" partName="Enemy.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/Enemy.java" title="Enemy.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/Enemy.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/Enemy.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="260" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CombatGameMap.java" partName="CombatGameMap.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/CombatGameMap.java" title="CombatGameMap.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/CombatGameMap.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/CombatGameMap.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="237" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Combatant.java" partName="Combatant.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/Combatant.java" title="Combatant.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/Combatant.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/Combatant.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2855" selectionTopPixel="920"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Panel.java" partName="Panel.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/ui/Panel.java" title="Panel.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/ui/Panel.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/ui/Panel.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="160" selectionOffset="678" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Graphics.class" partName="Graphics.class" title="Graphics.class" tooltip="playn.core.Graphics" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=rpg-core/\/home\/tsmaster\/.m2\/repository\/com\/googlecode\/playn\/playn-core\/1.3.1\/playn-core-1.3.1.jar&lt;playn.core(Graphics.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="3187" selectionTopPixel="1200"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="TextLayout.class" partName="TextLayout.class" title="TextLayout.class" tooltip="playn.core.TextLayout" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=rpg-core/\/home\/tsmaster\/.m2\/repository\/com\/googlecode\/playn\/playn-core\/1.3.1\/playn-core-1.3.1.jar&lt;playn.core(TextLayout.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="760" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Command.java" partName="Command.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/Command.java" title="Command.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/Command.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/Command.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="471" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WaitForAnim.java" partName="WaitForAnim.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/WaitForAnim.java" title="WaitForAnim.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/WaitForAnim.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/WaitForAnim.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="402" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttackJob.java" partName="AttackJob.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/AttackJob.java" title="AttackJob.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/AttackJob.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/AttackJob.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1052" selectionTopPixel="394"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Widget.java" partName="Widget.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/ui/Widget.java" title="Widget.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/ui/Widget.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/ui/Widget.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="147" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PushButton.java" partName="PushButton.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/ui/PushButton.java" title="PushButton.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/ui/PushButton.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/ui/PushButton.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="389" selectionTopPixel="75"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CombatBrain.java" partName="CombatBrain.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/CombatBrain.java" title="CombatBrain.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/CombatBrain.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/CombatBrain.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="260" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttackClosestEnemy.java" partName="AttackClosestEnemy.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/AttackClosestEnemy.java" title="AttackClosestEnemy.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/AttackClosestEnemy.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/AttackClosestEnemy.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1374" selectionTopPixel="346"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Passer.java" partName="Passer.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/Passer.java" title="Passer.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/Passer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/Passer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="485" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BrainFactory.java" partName="BrainFactory.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/BrainFactory.java" title="BrainFactory.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/BrainFactory.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/BrainFactory.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="312" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HoppingGuyMode.java" partName="HoppingGuyMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/HoppingGuyMode.java" title="HoppingGuyMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/HoppingGuyMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/HoppingGuyMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1412" selectionTopPixel="1307"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AlertMode.java" partName="AlertMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/AlertMode.java" title="AlertMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/AlertMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/AlertMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="589" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Party.java" partName="Party.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/Party.java" title="Party.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/Party.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/Party.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3900" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BaseCharacter.java" partName="BaseCharacter.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/characters/BaseCharacter.java" title="BaseCharacter.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/characters/BaseCharacter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/characters/BaseCharacter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2121" selectionTopPixel="810"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FighterCharacter.java" partName="FighterCharacter.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/characters/FighterCharacter.java" title="FighterCharacter.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/characters/FighterCharacter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/characters/FighterCharacter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="154" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RangerCharacter.java" partName="RangerCharacter.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/characters/RangerCharacter.java" title="RangerCharacter.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/characters/RangerCharacter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/characters/RangerCharacter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="153" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MageCharacter.java" partName="MageCharacter.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/characters/MageCharacter.java" title="MageCharacter.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/characters/MageCharacter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/characters/MageCharacter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="151" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InventoryObject.java" partName="InventoryObject.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/InventoryObject.java" title="InventoryObject.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/InventoryObject.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/InventoryObject.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="15" selectionOffset="1083" selectionTopPixel="439"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MapLocator.java" partName="MapLocator.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/MapLocator.java" title="MapLocator.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/MapLocator.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/MapLocator.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="176" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Thread.class" partName="Thread.class" title="Thread.class" tooltip="java.lang.Thread" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=rpg-android/\/usr\/lib\/jvm\/java-1.6.0-openjdk-1.6.0.0.x86_64\/jre\/lib\/rt.jar&lt;java.lang(Thread.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="74301" selectionTopPixel="27334"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Campaign.java" partName="Campaign.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/Campaign.java" title="Campaign.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/Campaign.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/Campaign.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="292" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Encounter.java" partName="Encounter.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/Encounter.java" title="Encounter.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/Encounter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/Encounter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="1422" selectionTopPixel="424"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="combat_grass.json" partName="combat_grass.json" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/combat_grass.json" title="combat_grass.json" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/combat_grass.json" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/combat_grass.json"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="548" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="combat_cave.json" partName="combat_cave.json" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/combat_cave.json" title="combat_cave.json" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/combat_cave.json" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/combat_cave.json"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="506" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="combat_sand.json" partName="combat_sand.json" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/combat_sand.json" title="combat_sand.json" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/combat_sand.json" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/combat_sand.json"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="565" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncounterDescription.java" partName="EncounterDescription.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/EncounterDescription.java" title="EncounterDescription.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/EncounterDescription.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/EncounterDescription.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="620" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShopMapObject.java" partName="ShopMapObject.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/ShopMapObject.java" title="ShopMapObject.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/ShopMapObject.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/ShopMapObject.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="280" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShopMode.java" partName="ShopMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/ShopMode.java" title="ShopMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/ShopMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/ShopMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1104" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HealerMapObject.java" partName="HealerMapObject.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/HealerMapObject.java" title="HealerMapObject.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/HealerMapObject.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/HealerMapObject.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="642" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HealerMode.java" partName="HealerMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/HealerMode.java" title="HealerMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/HealerMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/HealerMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="790" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="PlayN.class" partName="PlayN.class" title="PlayN.class" tooltip="playn.core.PlayN" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=rpg-core/\/home\/tsmaster\/.m2\/repository\/com\/googlecode\/playn\/playn-core\/1.3.1\/playn-core-1.3.1.jar&lt;playn.core(PlayN.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="3182" selectionTopPixel="1320"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Keyboard$Adapter.class" partName="Keyboard$Adapter.class" title="Keyboard$Adapter.class" tooltip="playn.core.Keyboard$Adapter" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=rpg-core/\/home\/tsmaster\/.m2\/repository\/com\/googlecode\/playn\/playn-core\/1.3.1\/playn-core-1.3.1.jar&lt;playn.core(Keyboard$Adapter.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="3489" selectionTopPixel="1500"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Key.class" partName="Key.class" title="Key.class" tooltip="playn.core.Key" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=rpg-core/\/home\/tsmaster\/.m2\/repository\/com\/googlecode\/playn\/playn-core\/1.3.1\/playn-core-1.3.1.jar&lt;playn.core(Key.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="3" selectionOffset="713" selectionTopPixel="45"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CombatMode.java" partName="CombatMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/CombatMode.java" title="CombatMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/CombatMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/CombatMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4521" selectionTopPixel="1282"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PartyStatsMode.java" partName="PartyStatsMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/PartyStatsMode.java" title="PartyStatsMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/PartyStatsMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/PartyStatsMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="14" selectionOffset="5663" selectionTopPixel="2494"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GearMode.java" partName="GearMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/GearMode.java" title="GearMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/GearMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/GearMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="890" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="ratskellar.json" partName="ratskellar.json" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/ratskellar.json" title="ratskellar.json" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/ratskellar.json" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/ratskellar.json"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="719" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SplashScreenMode.java" partName="SplashScreenMode.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/SplashScreenMode.java" title="SplashScreenMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/SplashScreenMode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/SplashScreenMode.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1450" selectionTopPixel="409"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Tile.java" partName="Tile.java" path="/home/tsmaster/Dev/PlayN/NaGaDeMo2012/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/Tile.java" title="Tile.java" tooltip="rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/Tile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/Tile.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="601" selectionTopPixel="135"/>
+</editor>
+</editors>
+<views>
+<view id="com.android.ide.eclipse.ddms.views.DeviceView" partName="Devices">
+<viewState/>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.callhierarchy.view" partName="Call Hierarchy">
+<viewState search_scope_type="1"/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="948" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="1" linkWithEditor="1" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="com.google.gdt.eclipse.managedapis.ui.ManagedApiContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.m2e.MavenModuleFilter" isEnabled="false"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
+<viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
+<sorter groupBy="CATEGORY_QUERY">
+<sorter>
+<sort0 sortDirection="1" sortKey="PRIORITY"/>
+<sort1 sortDirection="1" sortKey="RANK"/>
+<sort2 sortDirection="1" sortKey="DATE_CREATED"/>
+<sort3 sortDirection="1" sortKey="NONE"/>
+<sort4 sortDirection="1" sortKey="NONE"/>
+<sort5 sortDirection="1" sortKey="NONE"/>
+<sort6 sortDirection="1" sortKey="NONE"/>
+<sort7 sortDirection="1" sortKey="NONE"/>
+</sorter>
+</sorter>
+<filteredTreeFindHistory/>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+<view id="com.google.gwt.eclipse.DevModeView" partName="Development Mode"/>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.wb.core.ui.actionset"/>
+<alwaysOnActionSet id="adt.actionSet.wizards"/>
+<alwaysOnActionSet id="adt.actionSet.refactorings"/>
+<alwaysOnActionSet id="adt.actionSet.avdManager"/>
+<alwaysOnActionSet id="adt.actionSet.lint"/>
+<alwaysOnActionSet id="com.google.gdt.eclipse.core.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<show_view_action id="org.eclipse.wb.core.StructureView"/>
+<show_view_action id="org.eclipse.wb.core.PaletteView"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="com.android.ide.eclipse.adt.project.NewProjectWizard"/>
+<new_wizard_action id="com.android.ide.eclipse.editors.wizards.NewXmlFileWizard"/>
+<new_wizard_action id="com.google.gdt.eclipse.suite.wizards.newProjectWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newEntryPointWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newHostPageWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newModuleWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newClientBundleWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newUiBinderWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="com.android.ide.eclipse.ddms.Perspective"/>
+<perspective_action id="com.android.ide.eclipse.hierarchyviewer.PixelPerfectPespective"/>
+<perspective_action id="com.android.ide.eclipse.hierarchyviewer.TreeViewPerspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="com.android.ide.eclipse.ddms.views.DeviceView"/>
+<view id="org.eclipse.jdt.callhierarchy.view"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.search.ui.views.SearchView" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.29905438"/>
+<view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29905438"/>
+<view id="org.eclipse.search.ui.views.SearchView" ratio="0.29905438"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<page content="org.eclipse.wb.core.StructureView" label="LabelNotFound"/>
+<page content="org.eclipse.wb.core.PaletteView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@57ced290" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.7488152" ratioLeft="474" ratioRight="159" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<page content="com.google.gwt.eclipse.DevModeView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@106258e1" ratio="0.7932894" ratioLeft="1324" ratioRight="345" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="com.android.ide.eclipse.ddms.views.DeviceView" label="Devices"/>
+<page content="org.eclipse.jdt.callhierarchy.view" label="Call Hierarchy"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.5" ratioLeft="237" ratioRight="237" relationship="4" relative="org.eclipse.ui.internal.ViewStack@106258e1">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.egit.ui.RepositoriesView" ratio="0.59873617" ratioLeft="379" ratioRight="254" relationship="4" relative="left"/>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.wb.core.ui.actionset"/>
+<alwaysOnActionSet id="adt.actionSet.wizards"/>
+<alwaysOnActionSet id="adt.actionSet.refactorings"/>
+<alwaysOnActionSet id="adt.actionSet.avdManager"/>
+<alwaysOnActionSet id="adt.actionSet.lint"/>
+<alwaysOnActionSet id="com.google.gdt.eclipse.core.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+<show_view_action id="com.android.ide.eclipse.ddms.views.DeviceView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="com.android.ide.eclipse.ddms.Perspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.jdt.callhierarchy.view"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="org.eclipse.debug.internal.ui.ConsoleFolderView" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
+<fastViews>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29905438"/>
+<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
+<view id="com.google.gwt.eclipse.DevModeView" ratio="0.3"/>
+<view id="org.eclipse.debug.ui.VariableView" ratio="0.45271868"/>
+<view id="org.eclipse.debug.ui.BreakpointView" ratio="0.29905438"/>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView" ratio="0.29905438"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1254" ratioRight="418" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74940896" ratioLeft="634" ratioRight="212" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="com.google.gwt.eclipse.DevModeView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.VariableView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.44952682" ratioLeft="285" ratioRight="349" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1254" ratioRight="418" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.jdt.callhierarchy.view" label="Call Hierarchy"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="836" ratioRight="836" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/CombatMode.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/Rpg.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/PartyStatsMode.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/dungeon.json"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/CombatMapMarker.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/GameMap.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/ratskellar.json"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/SplashScreenMode.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/MapObject.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/brains/AttackClosestEnemy.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/Tile.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/rpg/core/target/classes/com/bigdicegames/nagademo2012/resources/maps/skara_brae.json"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/skarabrae.json"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/map/Tile.java"/>
+</editors>
+<item historyLabel="SplashScreenMode.java" index="7">
+<position info="not_deleted" x="527" y="0"/>
+</item>
+<item historyLabel="CombatMapMarker.java" index="4">
+<position info="not_deleted" x="473" y="9"/>
+</item>
+<item historyLabel="MapObject.java" index="8">
+<position info="not_deleted" x="589" y="450"/>
+</item>
+<item historyLabel="SplashScreenMode.java" index="7">
+<position info="not_deleted" x="527" y="0"/>
+</item>
+<item historyLabel="SplashScreenMode.java" index="7">
+<position info="not_deleted" x="493" y="0"/>
+</item>
+<item historyLabel="SplashScreenMode.java" index="7">
+<position info="not_deleted" x="882" y="0"/>
+</item>
+<item historyLabel="SplashScreenMode.java" index="7">
+<position info="not_deleted" x="912" y="0"/>
+</item>
+<item historyLabel="SplashScreenMode.java" index="7">
+<position info="not_deleted" x="912" y="0"/>
+</item>
+<item historyLabel="SplashScreenMode.java" index="7">
+<position info="not_deleted" x="578" y="0"/>
+</item>
+<item historyLabel="SplashScreenMode.java" index="7">
+<position info="not_deleted" x="609" y="0"/>
+</item>
+<item historyLabel="SplashScreenMode.java" index="7">
+<position info="not_deleted" x="1434" y="0"/>
+</item>
+<item historyLabel="SplashScreenMode.java" index="7">
+<position info="not_deleted" x="1450" y="0"/>
+</item>
+<item historyLabel="Rpg.java" index="1">
+<position info="not_deleted" x="1178" y="0"/>
+</item>
+<item historyLabel="Rpg.java" index="1">
+<position info="not_deleted" x="4360" y="0"/>
+</item>
+<item historyLabel="Rpg.java" index="1">
+<position info="not_deleted" x="4361" y="0"/>
+</item>
+<item historyLabel="Rpg.java" index="1">
+<position info="not_deleted" x="4385" y="0"/>
+</item>
+<item historyLabel="Rpg.java" index="1">
+<position info="not_deleted" x="4282" y="122"/>
+</item>
+<item historyLabel="CombatMode.java" index="0">
+<position info="not_deleted" x="4521" y="0"/>
+</item>
+<item historyLabel="ratskellar.json" index="6">
+<position info="not_deleted" x="719" y="0"/>
+</item>
+<item historyLabel="dungeon.json" index="3">
+<position info="not_deleted" x="886" y="0"/>
+</item>
+<item historyLabel="AttackClosestEnemy.java" index="9">
+<position info="not_deleted" x="2165" y="10"/>
+</item>
+<item historyLabel="AttackClosestEnemy.java" index="9">
+<position/>
+</item>
+<item historyLabel="AttackClosestEnemy.java" index="9">
+<position info="not_deleted" x="1374" y="0"/>
+</item>
+<item historyLabel="Tile.java" index="10">
+<position info="not_deleted" x="583" y="0"/>
+</item>
+<item historyLabel="skara_brae.json" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Tile.java" index="10">
+<position info="not_deleted" x="583" y="0"/>
+</item>
+<item historyLabel="dungeon.json" index="3">
+<position info="not_deleted" x="886" y="0"/>
+</item>
+<item historyLabel="skarabrae.json" index="12">
+<position info="not_deleted" x="869" y="0"/>
+</item>
+<item historyLabel="GameMap.java" index="5">
+<position info="not_deleted" x="9885" y="8"/>
+</item>
+<item historyLabel="Tile.java" index="13">
+<position info="not_deleted" x="236" y="8"/>
+</item>
+<item historyLabel="Tile.java" index="10">
+<position info="not_deleted" x="601" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="948" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5465" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5595" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5284" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5655" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5656" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5694" y="0"/>
+</item>
+<item historyLabel="GameMap.java" index="5">
+<position info="not_deleted" x="166" y="36"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5694" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="6188" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5769" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5770" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5707" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5763" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="6065" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5923" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="5965" y="0"/>
+</item>
+<item historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="6065" y="0"/>
+</item>
+<item active="true" historyLabel="PartyStatsMode.java" index="2">
+<position info="not_deleted" x="6162" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@106258e1"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="com.google.gdt.eclipse.login.status.trim"/>
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
+<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.ConsoleFolderView"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="skara_brae.json" tooltip="rpg/core/target/classes/com/bigdicegames/nagademo2012/resources/maps/skara_brae.json">
+<persistable path="/rpg/core/target/classes/com/bigdicegames/nagademo2012/resources/maps/skara_brae.json"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Tile.java" tooltip="rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/Tile.java">
+<persistable path="/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/Tile.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SplashScreenMode.java" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/SplashScreenMode.java">
+<persistable path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/core/modes/SplashScreenMode.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RpgJava.java" tooltip="rpg-java/src/main/java/com/bigdicegames/nagademo2012/java/RpgJava.java">
+<persistable path="/rpg-java/src/main/java/com/bigdicegames/nagademo2012/java/RpgJava.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Combatant.java" tooltip="rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/Combatant.java">
+<persistable path="/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/map/mapobjects/combat/Combatant.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CombatMode.java" tooltip="rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/CombatMode.java">
+<persistable path="/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/modes/combat/CombatMode.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="ratskellar.json" tooltip="rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/ratskellar.json">
+<persistable path="/rpg-core/src/main/java/com/bigdicegames/nagademo2012/resources/maps/ratskellar.json"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RpgActivity.java" tooltip="rpg-android/src/main/java/com/bigdicegames/nagademo2012/android/RpgActivity.java">
+<persistable path="/rpg-android/src/main/java/com/bigdicegames/nagademo2012/android/RpgActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RpgJava.java" tooltip="rpg/java/src/main/java/com/bigdicegames/nagademo2012/java/RpgJava.java">
+<persistable path="/rpg/java/src/main/java/com/bigdicegames/nagademo2012/java/RpgJava.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HtmlPlatform.class" tooltip="playn.html.HtmlPlatform">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=rpg-html/\/home\/tsmaster\/.m2\/repository\/com\/googlecode\/playn\/playn-html\/1.3.1\/playn-html-1.3.1.jar&lt;playn.html(HtmlPlatform.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="RpgHtml.java" tooltip="rpg-html/src/main/java/com/bigdicegames/nagademo2012/html/RpgHtml.java">
+<persistable path="/rpg-html/src/main/java/com/bigdicegames/nagademo2012/html/RpgHtml.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="Rpg.gwt.xml" tooltip="rpg/html/src/main/java/com/bigdicegames/nagademo2012/Rpg.gwt.xml">
+<persistable path="/rpg/html/src/main/java/com/bigdicegames/nagademo2012/Rpg.gwt.xml"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Game.class" tooltip="playn.core.Game">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=rpg-core/\/home\/tsmaster\/.m2\/repository\/com\/googlecode\/playn\/playn-core\/1.3.1\/playn-core-1.3.1.jar&lt;playn.core(Game.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Rpg.java" tooltip="rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/Rpg.java">
+<persistable path="/rpg/core/src/main/java/com/bigdicegames/nagademo2012/core/Rpg.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="pom.xml" tooltip="rpg-html/pom.xml">
+<persistable path="/rpg-html/pom.xml"/>
+</file>
+</mruList>
+</workbench>

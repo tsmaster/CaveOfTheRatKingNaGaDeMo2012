@@ -1,0 +1,28 @@
+package com.bigdicegames.nagademo2012.core.map;
+
+public class EncounterDescription {
+
+	private String name;
+	private String mapName;
+	private double frequency;
+
+	public EncounterDescription setName(String name) {
+		this.name = name;
+		return this;
+	}
+
+	public EncounterDescription setMapName(String mapName) {
+		this.mapName = mapName;
+		return this;
+	}
+
+	public EncounterDescription setFrequency(double frequency) {
+		this.frequency = frequency;
+		return this;
+	}
+
+	public float getFrequency() {
+		return frequency;
+	}
+
+}

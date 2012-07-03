@@ -1,0 +1,23 @@
+{
+  "lines": [
+    "......E.....",
+    ".....eee....",
+    "....ReReR...",
+    "...RRReRRR..",
+    "..RRRRRRRRR.",
+    "...RRRRRRR..",
+    "....ppppp...",
+    "......E....."
+  ],
+  
+  "objects": [{"type": "exit",
+               "map_marker": "E",
+               "icon": "city"},
+              {"type": "player spawn",
+               "map_marker": "p",
+               "icon": "road"},
+              {"type": "enemy spawn",
+               "map_marker": "e",
+               "icon": "road"}
+               ]
+}

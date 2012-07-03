@@ -1,0 +1,24 @@
+package com.bigdicegames.nagademo2012.core.characters;
+
+
+public class RangerCharacter extends BaseCharacter {
+	@Override
+	public int getMaxHitPoints() {
+		return 8 * getLevel();
+	}
+	
+	@Override
+	public int getToHit() {
+		return 12 + getLevel();
+	}
+
+	@Override
+	public String getClassName() {
+		return "Ranger";
+	}
+	
+	@Override
+	protected String getIconFilename() {
+		return "images/archer_100.png";
+	}
+}

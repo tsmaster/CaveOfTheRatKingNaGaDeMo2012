@@ -1,0 +1,23 @@
+package com.bigdicegames.nagademo2012.core;
+
+public class InventoryObject {
+	enum InventoryProto {
+		INV_DAGGER ("dagger", 1, 2, INV_TYPE_WEAPON),
+		INV_SWORD ("shortsword", 2,4, INV_TYPE_WEAPON),
+		INV_
+	}
+	
+	
+	
+	private String name;
+
+	public InventoryObject setName(String name) {
+		this.name = name;
+		return this;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+}

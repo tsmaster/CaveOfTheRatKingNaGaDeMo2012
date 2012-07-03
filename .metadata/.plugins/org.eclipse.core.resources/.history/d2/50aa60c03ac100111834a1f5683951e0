@@ -1,0 +1,267 @@
+package com.bigdicegames.nagademo2012.core.modes;
+
+import static playn.core.PlayN.graphics;
+
+import java.util.ArrayList;
+
+import com.bigdicegames.nagademo2012.core.InventoryObject;
+import com.bigdicegames.nagademo2012.core.InventoryObject.InventoryProto;
+import com.bigdicegames.nagademo2012.core.Party;
+import com.bigdicegames.nagademo2012.core.ui.PushButton;
+import com.bigdicegames.nagademo2012.core.ui.PushButton.ButtonCallback;
+import com.bigdicegames.nagademo2012.core.util.BoundingBox4i;
+
+import playn.core.Canvas;
+import playn.core.CanvasImage;
+import playn.core.GroupLayer;
+import playn.core.ImageLayer;
+import playn.core.TextFormat;
+import playn.core.TextLayout;
+import playn.core.Mouse.ButtonEvent;
+import playn.core.Pointer.Event;
+import playn.core.TextFormat.Alignment;
+
+public class ShopMode implements GameMode {
+
+	private static final int BUTTON_WIDTH = 100;
+	private static final int BUTTON_HEIGHT = 80;
+	private static final int SLOT_BUTTON_HEIGHT = 60;
+	private int bgWidth;
+	private int bgHeight;
+	private ImageLayer bgImageLayer;
+	private PushButton okButton;
+	private GroupLayer groupLayer;
+	private int backgroundColor;
+	private CanvasImage bgImage;
+	private String alertText;
+	private PushButton buyButton;
+	private PushButton sellButton;
+	private ArrayList<PushButton> slotButtons;
+	private ArrayList<PushButton> buttons;
+	private boolean buyMode;
+
+	public ShopMode() {
+		buttons = new ArrayList<PushButton>();
+		slotButtons = new ArrayList<PushButton>();
+	}
+	
+	@Override
+	public void onPopped() {
+		graphics().rootLayer().remove(groupLayer);
+		bgImageLayer.destroy();
+		okButton = null;
+		groupLayer.destroy();
+	}
+
+	@Override
+	public void onPushed() {
+		bgWidth = Math.min(graphics().width(), 1000);
+		bgHeight = Math.min(graphics().height(), 600);
+
+		bgImage = graphics().createImage(bgWidth, bgHeight);
+		bgImageLayer = graphics().createImageLayer(bgImage);
+		int bgX = (graphics().width() - bgWidth) / 2;
+		int bgY = (graphics().height() - bgHeight) / 2;
+		bgImageLayer.setTranslation(bgX, bgY);
+		
+		int left = (graphics().width() - BUTTON_WIDTH)/2;
+		int top = bgY + bgHeight - BUTTON_HEIGHT;
+		int right = left + BUTTON_WIDTH;
+		int bottom = top + BUTTON_HEIGHT;
+
+		groupLayer = graphics().createGroupLayer();
+		groupLayer.add(bgImageLayer);
+		
+		okButton = new PushButton("Done", new BoundingBox4i(left, top, right, bottom), new ButtonCallback(){
+			@Override
+			public void onClicked() {
+				ModeMgr.get().popMode(ShopMode.this);
+			}});
+		
+		buttons.add(okButton);
+		
+		groupLayer.add(okButton.getLayer());
+		graphics().rootLayer().add(groupLayer);
+		
+		left = bgX;
+		top = bgY + BUTTON_HEIGHT;
+		right = left + BUTTON_WIDTH;
+		bottom = top + BUTTON_HEIGHT;
+		
+		buyButton = new PushButton("Buy", new BoundingBox4i(left, top, right, bottom), new ButtonCallback() {
+			@Override
+			public void onClicked() {
+				setBuyMode(true);
+			}
+		});
+		groupLayer.add(buyButton.getLayer());
+		buttons.add(buyButton);
+		
+		left = bgX;
+		top = bgY + 3 * BUTTON_HEIGHT;
+		right = left + BUTTON_WIDTH;
+		bottom = top + BUTTON_HEIGHT;
+		
+		sellButton = new PushButton("Sell", new BoundingBox4i(left, top, right, bottom), new ButtonCallback() {
+			@Override
+			public void onClicked() {
+				setBuyMode(false);
+			}
+		});
+		groupLayer.add(sellButton.getLayer());
+		buttons.add(sellButton);
+
+		for (int i = 0; i < 4; i++) {
+			left = (int) (bgX + BUTTON_WIDTH * 1.5);
+			top = (int) (bgY + BUTTON_HEIGHT + SLOT_BUTTON_HEIGHT * 1.1 * i);
+			right = bgX + bgWidth;
+			bottom = top + SLOT_BUTTON_HEIGHT;
+			final int index = i;
+			
+			PushButton slotButton = new PushButton("slot", new BoundingBox4i(left, top, right, bottom), new ButtonCallback() {
+				@Override
+				public void onClicked() {
+					slotClicked(index);
+				}
+			});
+			slotButtons.add(slotButton);
+			buttons.add(slotButton);
+			groupLayer.add(slotButton.getLayer());
+		}
+		
+		updateUI();
+		
+		this.setBackgroundColor(0xff60A060)
+			.setAlertText("Well, as I live and breathe, if it isn't me old friend ${PLAYER_NAME}!")
+			.render();
+	}
+	
+	private void updateUI() {
+		if (buyMode) {
+			buyButton.setColor(0xff808080);
+			sellButton.setColor(0xff404040);
+		} else {
+			buyButton.setColor(0xff404040);
+			sellButton.setColor(0xff808080);
+		}
+		fillSlots();
+	}
+
+	private void fillSlots() {
+		if (buyMode) {
+			ArrayList<InventoryObject> inventory = getStoreInventory(); 
+			for (int i = 0; i < 4; ++i) {
+				if (i < inventory.size()) {
+					String label = "Buy "+inventory.get(i).getName()+" for "+inventory.get(i).getBuyPrice();
+					slotButtons.get(i).setText(label);
+				} else {
+					slotButtons.get(i).setText("--");
+				}
+			}
+		} else {
+			ArrayList<InventoryObject> inventory = Party.get().getInventory();
+			for (int i = 0; i < 4; ++i) {
+				if (i < inventory.size()) {
+					String label = "Sell "+inventory.get(i).getName()+" for "+inventory.get(i).getSellPrice();
+					slotButtons.get(i).setText(label);
+				} else {
+					slotButtons.get(i).setText("--");
+				}
+			}
+		}
+	}
+
+	private ArrayList<InventoryObject> getStoreInventory() {
+		ArrayList<InventoryObject> inventory = new ArrayList<InventoryObject>();
+		inventory.add(new InventoryObject(InventoryObject.InventoryProto.INV_DAGGER));
+		inventory.add(new InventoryObject(InventoryObject.InventoryProto.INV_SWORD));
+		inventory.add(new InventoryObject(InventoryObject.InventoryProto.INV_LEATHER_ARMOR));
+		inventory.add(new InventoryObject(InventoryObject.InventoryProto.INV_CHAIN_MAIL));
+		return inventory;
+	}
+
+	protected void slotClicked(int i) {
+		if (buyMode) {
+			ArrayList<InventoryObject> inventory = getStoreInventory();
+			InventoryObject o = inventory.get(i);
+			InventoryProto p = o.getProto();
+			int buyPrice = o.getBuyPrice();
+			if (Party.get().getGold() >= buyPrice) {
+				Party.get().addInventory(p);
+				Party.get().addGold(-buyPrice);
+			}
+		} else {
+			ArrayList<InventoryObject> inventory = Party.get().getInventory();
+
+			InventoryObject o = inventory.get(i);
+			Party.get().dropInventory(o);
+			Party.get().addGold(o.getSellPrice());
+		}
+	}
+
+	protected void setBuyMode(boolean buy) {
+		buyMode = buy;
+		updateUI();
+	}
+
+	public ShopMode setBackgroundColor(int color) {
+		this.backgroundColor = color;
+		return this;
+	}
+	
+	public ShopMode setAlertText(String text) {
+		this.alertText = text;
+		return this;
+	}
+	
+	public void render() {
+		Canvas c = bgImage.canvas();
+		c.clear();
+		c.setFillColor(backgroundColor);
+		c.fillRect(0, 0, bgWidth, bgHeight);
+		c.setFillColor(0xffffffff);
+		TextFormat format = new TextFormat().withAlignment(Alignment.CENTER).withWrapWidth(bgWidth*.75f);
+		TextLayout layout = graphics().layoutText(alertText, format);
+		c.fillText(layout, (bgWidth-layout.width())/2.0f, layout.height());
+	}
+
+	@Override
+	public void onUpdate(float deltaSeconds) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPaint(float alpha) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onMouseDown(ButtonEvent event) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPointerStart(Event event) {
+		for (PushButton b : buttons) {
+			if (b.tryClick(event)) {
+				return;
+			}
+		}
+	}
+
+	@Override
+	public void onBecomeTop() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onKeyDown(playn.core.Keyboard.Event event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

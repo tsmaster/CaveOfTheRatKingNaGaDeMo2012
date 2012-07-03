@@ -1,0 +1,272 @@
+package com.bigdicegames.nagademo2012.core.modes.combat;
+
+import static playn.core.PlayN.graphics;
+import static playn.core.PlayN.log;
+
+import java.util.ArrayList;
+
+import playn.core.Canvas;
+import playn.core.CanvasImage;
+import playn.core.ImageLayer;
+import playn.core.Key;
+import playn.core.Mouse.ButtonEvent;
+import playn.core.Pointer.Event;
+
+import com.bigdicegames.nagademo2012.core.CameraMgr;
+import com.bigdicegames.nagademo2012.core.map.GameMap;
+import com.bigdicegames.nagademo2012.core.map.Location;
+import com.bigdicegames.nagademo2012.core.map.MapMgr;
+import com.bigdicegames.nagademo2012.core.map.MapObject;
+import com.bigdicegames.nagademo2012.core.map.Tile;
+import com.bigdicegames.nagademo2012.core.map.mapobjects.combat.Combatant;
+import com.bigdicegames.nagademo2012.core.math.Vec2f;
+import com.bigdicegames.nagademo2012.core.math.Vec2i;
+import com.bigdicegames.nagademo2012.core.modes.GameMode;
+import com.bigdicegames.nagademo2012.core.modes.ModeMgr;
+import com.bigdicegames.nagademo2012.core.ui.PushButton;
+import com.bigdicegames.nagademo2012.core.ui.PushButton.ButtonCallback;
+import com.bigdicegames.nagademo2012.core.util.BoundingBox4i;
+
+public class WaitForCommand implements GameMode {
+	private static final int SELECTED_BUTTON_COLOR = 0x80ff0000;
+	private static final int DESELECTED_BUTTON_COLOR = 0x800000ff;
+	private static final float CAMERA_INTERP_DURATION = 0.4f;
+	private static final float NAME_DISPLAY_WIDTH = 250;
+	CanvasImage nameDisplay;
+	ImageLayer nameDisplayLayer;
+	private Combatant activeCharacter;
+
+	static int BUTTONS_TOP = 50;
+	static int BUTTON_WIDTH = 120; 
+	static int BUTTON_HEIGHT = 60;
+	static int BUTTON_GUTTER = 40;
+	
+	PushButton moveButton;
+	PushButton fireButton;
+	PushButton useButton;
+	PushButton castButton;
+	PushButton passButton;
+	private ArrayList<PushButton> buttons;
+	private Action selectedAction;
+	private CanvasImage highlight;
+	private ImageLayer highlightLayer;
+	
+	public enum Action {
+		MOVE,
+		ATTACK,
+		FIRE,
+		USE,
+		CAST,
+		PASS
+	};
+	
+	public enum Button {
+		BTN_MV_ATTACK (Action.MOVE, Action.ATTACK, "MOVE / ATTACK", true),
+		BTN_FIRE (Action.FIRE, null, "FIRE", true),
+		BTN_USE (Action.USE, null, "USE", true),
+		BTN_CAST (Action.CAST, null, "CAST", true),
+		BTN_PASS (Action.PASS, null, "PASS", false);
+		
+		public final Action action1;
+		public final Action action2;
+		public final String label;
+		public boolean requiresTarget;
+		Button (Action action1, Action action2, String label, boolean requiresTarget) {
+			this.action1 = action1;
+			this.action2 = action2;
+			this.label = label;
+			this.requiresTarget = requiresTarget;
+		}
+		public ArrayList<Action> getActions() {
+			ArrayList<Action> actionList = new ArrayList<Action>();
+			if (action1 != null) {
+				actionList.add(action1);
+			}
+			if (action2 != null) {
+				actionList.add(action2);
+			}
+			return actionList;
+		}
+	}
+	
+	public WaitForCommand() {
+		nameDisplay = graphics().createImage(NAME_DISPLAY_WIDTH, 25);
+		nameDisplayLayer = graphics().createImageLayer(nameDisplay);
+		
+		highlight = graphics().createImage(100, 100);
+		highlightLayer = graphics().createImageLayer(highlight);
+		highlightLayer.setOrigin(50, 50);
+		Canvas highlightCanvas = highlight.canvas();
+		highlightCanvas.setStrokeColor(0x80ffffff);
+		highlightCanvas.setStrokeWidth(10);
+		highlightCanvas.strokeCircle(50, 50, 45);
+		
+		highlightLayer.setTranslation(graphics().width()/2, graphics().height()/2);
+		
+		
+		
+		buttons = new ArrayList<PushButton>();
+
+		int buttonsBottom = graphics().height();
+		int slotHeight = (buttonsBottom-BUTTONS_TOP) / Button.values().length;
+		float gutterFrac = 0.15f;
+		int buttonHeight = (int) (slotHeight * (1.0f - gutterFrac));
+		
+		int y = BUTTONS_TOP;
+		for (final Button b : Button.values()) {
+			PushButton pb = new PushButton(b.label, new BoundingBox4i(0, y, BUTTON_WIDTH, y + buttonHeight), new ButtonCallback() {
+				@Override
+				public void onClicked() {
+					ArrayList<Action> actions = b.getActions();
+					setAction(actions.get(0));
+					if (!b.requiresTarget) { 
+						activeCharacter.setCommand(new Command(actions.get(0)));
+						ModeMgr.get().popMode(WaitForCommand.this);
+					}
+				}});
+			pb.setId(b.action1.ordinal());
+			buttons.add(pb);
+			y += slotHeight;
+		}
+				
+		
+		setAction(Action.MOVE);
+	}
+	
+	public void setAction(Action action) {
+		for (int i = 0; i < buttons.size(); ++i) {
+			if (buttons.get(i).getId() == action.ordinal()) {
+				buttons.get(i).setColor(SELECTED_BUTTON_COLOR);
+			} else {
+				buttons.get(i).setColor(DESELECTED_BUTTON_COLOR);
+			}
+		}
+		selectedAction = action;
+	}
+	
+	public void setActiveCharacter(Combatant c) {
+		this.activeCharacter = c;
+		drawName();
+	}
+
+	private void drawName() {
+		Canvas displayCanvas = nameDisplay.canvas();
+		displayCanvas.clear();
+		displayCanvas.setFillColor(0x80ff00ff);
+		displayCanvas.fillRect(0, 0, NAME_DISPLAY_WIDTH, 25);
+		displayCanvas.setFillColor(0xffffffff);
+		displayCanvas.setStrokeColor(0xff000000);
+		String s = activeCharacter.getCharacterName() + " HP:" + activeCharacter.getCurrentHitPoints() + 
+				" AC:" + activeCharacter.getArmorClass();
+		displayCanvas.drawText(s, 0, 16);
+	}
+	
+	@Override
+	public void onBecomeTop() {
+		
+	}
+
+	@Override
+	public void onPopped() {
+		graphics().rootLayer().remove(nameDisplayLayer);
+		graphics().rootLayer().remove(highlightLayer);
+		for (PushButton b : buttons) {
+			graphics().rootLayer().remove(b.getLayer());
+		}
+	}
+
+	@Override
+	public void onPushed() {
+		setAction(Action.MOVE);
+		graphics().rootLayer().add(nameDisplayLayer);
+		graphics().rootLayer().add(highlightLayer);
+		for (PushButton b : buttons) {
+			graphics().rootLayer().add(b.getLayer());
+		}
+
+		Vec2i activePos= activeCharacter.getPosition();
+		Location loc = MapMgr.get().getCurrentMap().getLocation(activePos);
+		log().info("interpolating to "+activePos.toString());
+		CameraMgr.get().interpolateTo(loc.getWorldPos(), CAMERA_INTERP_DURATION, CameraMgr.InterpolationStyle.EASE_OUT_QUAD);
+		
+	}
+
+	@Override
+	public void onUpdate(float deltaSeconds) {
+		CameraMgr.get().update(deltaSeconds);
+		Vec2f camPos = CameraMgr.get().getPos();
+		MapMgr.get().getCurrentMap().setCameraPosition(camPos.x, camPos.y);
+	}
+
+	@Override
+	public void onPaint(float alpha) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onMouseDown(ButtonEvent event) {
+	}
+
+	@Override
+	public void onPointerStart(Event event) {
+		for (PushButton b : buttons) {
+			if (b.tryClick(event)) {
+				return;
+			}
+		}
+		
+		Vec2f worldPos = MapMgr.get().getCurrentMap().screenToWorld(event.x(), event.y());
+		Vec2i destPos = GameMap.worldToTile(worldPos);
+		
+		Action commandAction = selectedAction;
+		if (selectedAction == Action.MOVE) {
+			Location destLoc = MapMgr.get().getCurrentMap().getLocation(destPos);
+			Tile destTile = destLoc.getTile();
+			if (!destTile.isWalkable()) {
+				return;
+			}
+			
+			boolean foundNeighbor = false;
+			Vec2i posn = activeCharacter.getPosition();
+			Location loc = MapMgr.get().getCurrentMap().getLocation(posn);
+			for (Location neighborLoc : loc.getNeighbors()) {
+				if (neighborLoc.getTilePos().equals(destPos)) {
+					foundNeighbor = true;
+					break;
+				}
+			}
+			if (!foundNeighbor) {
+				return;
+			}
+			
+			ArrayList<MapObject> mapObjs = destLoc.getMapObjects();
+			if (mapObjs != null) {
+				for (MapObject destObj : mapObjs) {
+					Combatant destCombatant = (Combatant) destObj;
+					if (destCombatant != null) {
+						if (activeCharacter.opposed(destCombatant)) {
+							commandAction = Action.ATTACK;
+							break;
+						} else {
+							// can't attack a friend
+							return;
+						}
+					}
+				}
+			}
+		}
+		Command c = new Command(commandAction).setDestination(destPos);
+		log().info("issuing command "+c);
+		activeCharacter.setCommand(c);
+		ModeMgr.get().popMode(this);
+	}
+
+	@Override
+	public void onKeyDown(playn.core.Keyboard.Event event) {
+		if (event.key()==Key.H) {
+			activeCharacter.addHitPoints(100);
+		}
+	}
+
+}

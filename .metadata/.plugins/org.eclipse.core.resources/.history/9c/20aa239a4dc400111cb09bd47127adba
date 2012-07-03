@@ -1,0 +1,115 @@
+package com.bigdicegames.nagademo2012.core.map;
+
+import static playn.core.PlayN.graphics;
+import static playn.core.PlayN.log;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import playn.core.GroupLayer;
+import playn.core.Layer;
+
+import com.bigdicegames.nagademo2012.core.math.Vec2i;
+import com.bigdicegames.nagademo2012.core.util.BoundingBox4i;
+
+public class MapMgr {
+	private HashMap<String, GameMap> mapDictionary;
+	private GameMap currentMap;
+	private BoundingBox4i windowBoundingBox;
+	private String currentMapName;
+	private static GroupLayer mapLayer;
+	
+	private static MapMgr singleton;
+	
+	private MapMgr() {
+		this.mapDictionary = new HashMap<String, GameMap>();
+		mapLayer = graphics().createGroupLayer();
+	}
+	
+	public void load(String name, String filename) {
+		ArrayList<String> combatMaps = new ArrayList<String>();
+		combatMaps.add("combat cave");
+		combatMaps.add("combat grass");
+		
+		boolean isCombat = false;
+		for (String m : combatMaps) {
+			if (name.equals(m)) {
+				isCombat = true;
+				break;
+			}
+		}
+		if (isCombat) {
+			mapDictionary.put(name, new CombatGameMap(filename));
+		} else {
+			mapDictionary.put(name, new GameMap(filename));
+		}
+	}
+
+	public static MapMgr get() {
+		if (singleton == null) {
+			singleton = new MapMgr();
+		}
+		return singleton;
+	}
+	
+	public void goToMap(String name, Vec2i exitTilePos) {
+		if (!mapDictionary.containsKey(name)) {
+			log().error("trying to load missing map: "+name);
+			return;
+		}
+		currentMapName = name;
+		currentMap = mapDictionary.get(name);
+		mapLayer.clear();
+		mapLayer.add(currentMap.getLayer());
+		
+		if (windowBoundingBox != null) {
+			currentMap.setWindow(windowBoundingBox);
+		}
+		
+		if (exitTilePos != null) {
+			log().info("teleporting to "+exitTilePos);
+			currentMap.teleportTo(exitTilePos);
+		} else {
+			currentMap.centerOnCurrentPos();
+		}
+	}
+	
+	public void setWindow(int left, int top, int right, int bottom) {
+		windowBoundingBox = new BoundingBox4i(left, top, right, bottom);
+		if (currentMap != null) {
+			currentMap.setWindow(windowBoundingBox);
+		}
+	}
+
+	public Layer getLayer() {
+		return mapLayer;
+	}
+
+	public GameMap getCurrentMap() {
+		return currentMap;
+	}
+	
+	public String getCurrentMapName() {
+		return currentMapName;
+	}
+
+	public boolean allParsed() {
+		for (GameMap map : mapDictionary.values()) {
+			if (!map.parsed) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public void goToMapAndRespawn(String mapName) {
+		goToMap(mapName, null);
+		currentMap.teleportTo(currentMap.getRespawnPos());
+	}
+
+	public void goToMapAndSpawn(String mapName) {
+		goToMap(mapName, null);
+		currentMap.teleportTo(currentMap.getSpawnPos());
+	}
+
+}

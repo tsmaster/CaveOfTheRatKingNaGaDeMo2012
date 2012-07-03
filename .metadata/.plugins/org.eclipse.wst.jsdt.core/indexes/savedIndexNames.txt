@@ -1,0 +1,7 @@
+INDEX VERSION 1.122+/home/tsmaster/Dev/PlayN/NaGaDeMo2012/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3004597877.index
+2898390196.index
+742374945.index
+2782378860.index
+48853900.index
+2386663340.index

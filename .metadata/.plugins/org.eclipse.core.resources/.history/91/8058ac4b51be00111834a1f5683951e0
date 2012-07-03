@@ -1,0 +1,38 @@
+{
+  "lines": [
+    "..........................",
+    "....S1SS.........SSS......",
+    "..SSSSSSSS.....SSSGSS1....",
+    ".SSGGGGGGSS....SGGGGGS....",
+    ".SSGGGGMGSSSSSSSGGMGGSS...",
+    "..SSSSGGGGGGGGGGGGGSS2S...",
+    ".....1SSSSSSSSSSSSSS..S...",
+    ".........................."
+  ],
+  
+  "objects": [{"type": "combat",
+               "name": "rat man",
+               "map_name": "combat grass",
+               "icon": "sand",
+               "map_marker": "1",
+               "icon": "city"},
+              {"type": "portal",
+               "name": "skara brae",
+               "dest_x" : 2,
+               "dest_y" : 2,
+               "map_marker": "2",
+               "icon": "city"},
+              {"type": "combat",
+               "name": "rat king",
+               "map_name": "combat grass",
+               "icon": "road",
+               "map_marker": "5"
+               }
+               ],
+               
+   "spawn_pos": {"x": 10,
+                 "y": 4},
+               
+   "respawn_pos": {"x": 7,
+                   "y": 4}
+}

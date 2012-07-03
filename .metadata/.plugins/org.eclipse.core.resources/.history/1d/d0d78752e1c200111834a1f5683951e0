@@ -1,0 +1,100 @@
+package com.bigdicegames.nagademo2012.core.map.mapobjects.combat.brains;
+
+import static playn.core.PlayN.log;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.bigdicegames.nagademo2012.core.map.Location;
+import com.bigdicegames.nagademo2012.core.map.MapMgr;
+import com.bigdicegames.nagademo2012.core.map.MapObject;
+import com.bigdicegames.nagademo2012.core.map.Tile;
+import com.bigdicegames.nagademo2012.core.map.mapobjects.combat.Combatant;
+import com.bigdicegames.nagademo2012.core.modes.combat.CombatMode;
+import com.bigdicegames.nagademo2012.core.modes.combat.Command;
+import com.bigdicegames.nagademo2012.core.modes.combat.WaitForCommand;
+
+public class AttackClosestEnemy implements CombatBrain {
+	
+	private Combatant body;
+
+	public AttackClosestEnemy(Combatant body) {
+		this.body = body;
+	}
+
+	@Override
+	public Command selectCommand(CombatMode mode) {
+		log().info("selecting command");
+		ArrayList<Location> locations = new ArrayList<Location>();
+		ArrayList<Combatant> adjacentEnemies = new ArrayList<Combatant>();
+		
+		for (Combatant e : mode.getEnemies(body)) {
+			if (!e.isAlive()) {
+				continue;
+			}
+			Location enemyLoc = MapMgr.get().getCurrentMap().getLocation(e.getPosition());
+			for (Location loc : enemyLoc.getNeighbors()) {
+				ArrayList<MapObject> objs = loc.getMapObjects();
+				if (objs.contains(body)) {
+					adjacentEnemies.add(e);
+				}
+				if (objs.size() == 0) {
+					locations.add(loc);
+				}
+			}
+		}
+		
+		if (adjacentEnemies.size() != 0) {
+			log().info("attacking");
+			Combatant target = adjacentEnemies.get(0);
+			return new Command(WaitForCommand.Action.ATTACK).setDestination(target.getPosition());
+		}
+		
+		ArrayList<Location> closedLocations = new ArrayList<Location>();
+		ArrayList<Location> openLocations = new ArrayList<Location>();
+		HashMap<Location, Location> destToStart = new HashMap<Location, Location>();
+		Location myLocation = MapMgr.get().getCurrentMap().getLocation(body.getPosition());
+		closedLocations.add(myLocation);
+		for (Location n : myLocation.getNeighbors()) {
+			Tile t = n.getTile();
+			if (!t.isWalkable()) {
+				continue;
+			}
+			
+			if (n.getMapObjects().size() == 0) {
+				if (locations.contains(n)) {
+					log().info("found one move");
+					return new Command(WaitForCommand.Action.MOVE).setDestination(n.getTilePos());
+				}
+				openLocations.add(n);
+				destToStart.put(n,n);
+			}
+		}
+		
+		while (openLocations.size() != 0) {
+			Location loc = openLocations.remove(0);
+			closedLocations.add(loc);
+			Location startLoc = destToStart.get(loc); 
+			for (Location n : loc.getNeighbors()) {
+				Tile t = n.getTile();
+				if (!t.isWalkable()) {
+					continue;
+				}
+				
+				if (locations.contains(n)) {
+					log().info("moving");
+					return new Command(WaitForCommand.Action.MOVE).setDestination(startLoc.getTilePos());
+				}
+				if (closedLocations.contains(n) || openLocations.contains(n) || n.getMapObjects().size() != 0) {
+					continue;
+				}
+				openLocations.add(n);
+				destToStart.put(n, startLoc);
+			}
+		}
+		
+		log().info("passing");
+		return new Command(WaitForCommand.Action.PASS);
+	}
+
+}

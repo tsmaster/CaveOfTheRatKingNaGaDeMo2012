@@ -1,0 +1,96 @@
+package com.bigdicegames.nagademo2012.core.modes;
+
+import static playn.core.PlayN.assets;
+import static playn.core.PlayN.graphics;
+import playn.core.Image;
+import playn.core.ImageLayer;
+import playn.core.PlayN;
+import playn.core.ResourceCallback;
+import playn.core.Mouse.ButtonEvent;
+import playn.core.Pointer.Event;
+
+public class SplashScreenMode implements GameMode {
+	
+	private String filename;
+	private Image image;
+	private ImageLayer imageLayer;
+
+	public SplashScreenMode(String filename) {
+		this.filename = filename;
+	}
+	
+	@Override
+	public void onPopped() {
+		graphics().rootLayer().remove(imageLayer);
+		imageLayer.destroy();
+	}
+
+	@Override
+	public void onPushed() {
+		image = assets().getImage(filename);
+		imageLayer = graphics().createImageLayer(image);
+		image.addCallback(new ResourceCallback<Image>(){
+			@Override
+			public void done(Image resource) {
+				float imgWidth = resource.width();
+				float imgHeight = resource.height();
+				float widthFrac = graphics().screenWidth() / imgWidth;
+				float heightFrac = graphics().screenHeight() / imgHeight;
+				float scaleFrac = Math.min(widthFrac, heightFrac);
+				imageLayer.setScale(scaleFrac);
+				float tx = (graphics().screenWidth()-imageLayer.scaledWidth()) / 2.0f;
+				float ty = (graphics().screenHeight()-imageLayer.scaledHeight()) / 2.0f;
+				imageLayer.setTranslation(tx, ty); 
+				graphics().rootLayer().add(imageLayer);
+			}
+
+			@Override
+			public void error(Throwable err) {
+				PlayN.log().error("ImCB: failed to load "+filename);
+				PlayN.log().error(err.toString());
+			}
+		});
+	}
+
+	@Override
+	public void onUpdate(float deltaSeconds) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPaint(float alpha) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onMouseDown(ButtonEvent event) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPointerStart(Event event) {
+		ModeMgr.get().popMode(this);
+	}
+
+	@Override
+	public void onBecomeTop() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onKeyDown(playn.core.Keyboard.Event event) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onBecomeNotTop() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

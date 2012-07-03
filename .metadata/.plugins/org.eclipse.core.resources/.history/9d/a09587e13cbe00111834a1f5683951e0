@@ -1,0 +1,32 @@
+package com.bigdicegames.nagademo2012.core;
+
+import java.util.ArrayList;
+
+public class Encounter {
+	class MonsterPlacement {
+		String monsterType;
+		String monsterName;
+		int hitPoints;
+		int startingX;
+		int startingY;
+		String brain;
+		int gold;
+		ArrayList<InventoryObject> loot;
+	}
+	
+	boolean isComplete;
+	String mapName;
+	ArrayList<MonsterPlacement> monsters;
+
+	public String getMapName() {
+		return mapName;
+	}
+
+	public boolean isComplete() {
+		return isComplete;
+	}
+	
+	public void setComplete(boolean complete) {
+		isComplete = complete;
+	}
+}

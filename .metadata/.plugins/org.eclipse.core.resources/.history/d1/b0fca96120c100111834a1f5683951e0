@@ -1,0 +1,42 @@
+package com.bigdicegames.nagademo2012.core;
+
+import com.bigdicegames.nagademo2012.core.InventoryObject.InventoryProto;
+
+
+public class InventoryObject {
+	public enum InvType {
+		WEAPON,
+		ARMOR,
+		EQUIPMENT
+	}
+	
+	public enum InventoryProto {
+		INV_DAGGER ("dagger", 1, 2, InvType.WEAPON),
+		INV_SWORD ("shortsword", 2, 4, InvType.WEAPON),
+		INV_LEATHER_ARMOR ("leather armor", 3, 6, InvType.ARMOR),
+		INV_CHAIN_MAIL ("chain mail", 5, 10, InvType.ARMOR);
+		
+		public String name;
+		public int sell;
+		public int buy;
+		public InvType type;
+
+		InventoryProto(String name, int sell, int buy, InvType type) {
+			this.name = name;
+			this.sell = sell;
+			this.buy = buy;
+			this.type = type;
+		}
+	}
+	
+	private InventoryProto proto;
+
+	public String getName() {
+		return proto.name;
+	}
+	
+	public InventoryObject(InventoryProto proto) {
+		this.proto = proto;
+	}
+
+}

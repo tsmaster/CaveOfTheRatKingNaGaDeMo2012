@@ -1,0 +1,260 @@
+package com.bigdicegames.nagademo2012.core.modes.combat;
+
+import java.util.ArrayList;
+
+import com.bigdicegames.nagademo2012.core.CameraMgr;
+import com.bigdicegames.nagademo2012.core.Encounter;
+import com.bigdicegames.nagademo2012.core.Party;
+import com.bigdicegames.nagademo2012.core.characters.BaseCharacter;
+import com.bigdicegames.nagademo2012.core.map.GameMap;
+import com.bigdicegames.nagademo2012.core.map.Location;
+import com.bigdicegames.nagademo2012.core.map.LongRunningJob;
+import com.bigdicegames.nagademo2012.core.map.MapMgr;
+import com.bigdicegames.nagademo2012.core.map.mapobjects.combat.Combatant;
+import com.bigdicegames.nagademo2012.core.map.mapobjects.combat.Enemy;
+import com.bigdicegames.nagademo2012.core.map.mapobjects.combat.PlayerCharacter;
+import com.bigdicegames.nagademo2012.core.map.mapobjects.combat.brains.BrainFactory;
+import com.bigdicegames.nagademo2012.core.math.Vec2i;
+import com.bigdicegames.nagademo2012.core.modes.AlertMode;
+import com.bigdicegames.nagademo2012.core.modes.GameMode;
+import com.bigdicegames.nagademo2012.core.modes.ModeMgr;
+
+import playn.core.Mouse.ButtonEvent;
+import playn.core.Pointer.Event;
+import static playn.core.PlayN.log;
+
+public class CombatMode implements GameMode {
+	private String mapName;
+	private ArrayList<Enemy> enemies;
+	private ArrayList<PlayerCharacter> playerCharacters;
+	private WaitForCommand wfcMode;
+	private WaitForAnim animMode;
+	private String parentMapName;
+	private Encounter encounter;
+
+	public CombatMode(String mapName) {
+		this.mapName = mapName;
+		wfcMode = new WaitForCommand();
+		animMode = new WaitForAnim();
+	}
+	
+	public CombatMode(Encounter e) {
+		this(e.getMapName());
+		this.encounter = e;
+	}
+
+	@Override
+	public void onPopped() {
+	}
+	
+	@Override
+	public void onBecomeTop() {
+		
+	}
+
+	@Override
+	public void onPushed() {
+		parentMapName = MapMgr.get().getCurrentMapName();
+		// TODO position PCs, monsters on spawn points
+		MapMgr.get().goToMap(mapName, new Vec2i(3,4));
+		
+		GameMap map = MapMgr.get().getCurrentMap();
+		populateMap(map);
+		
+		// TODO work out initiative
+	}
+
+	private void populateMap(GameMap map) {
+		enemies = new ArrayList<Enemy>();
+		for (int i = 0; i < 3; ++i) {
+			Enemy e = new Enemy("images/ratguy_100.png");
+			e.setCharacterName("ratman soldier");
+			e.setHitPoints(5);
+			e.setBrain(BrainFactory.makeBrain("attack closest", e));
+			map.placeMapObject(e, new Vec2i(i*2+2, 2));
+			enemies.add(e);
+		}
+		Enemy e = new Enemy("images/ratking_100.png");
+		e.setCharacterName("king of the ratmen");
+		e.setHitPoints(10);
+		e.setBrain(BrainFactory.makeBrain("attack closest", e));
+		map.placeMapObject(e, new Vec2i(4, 1));
+		enemies.add(e);
+		
+		playerCharacters = new ArrayList<PlayerCharacter>();
+
+		for (BaseCharacter cr : Party.get().getCharacters()) {
+			playerCharacters.add(cr.makeGuy());
+		}
+		
+		for (int i = 0; i<playerCharacters.size(); ++i) {
+			map.placeMapObject(playerCharacters.get(i), 2 + 2*i, 5);
+		}
+		
+		/*
+		PlayerCharacter pc;
+		pc = new PlayerCharacter("images/archer_100.png");
+		pc.setHitPoints(10);
+		pc.setCharacterName("Lando");
+		map.placeMapObject(pc, 2, 6);
+		playerCharacters.add(pc);
+		
+		pc = new PlayerCharacter("images/mage_100.png");
+		pc.setHitPoints(10);
+		pc.setCharacterName("Evro");
+		map.placeMapObject(pc, 4, 6);
+		playerCharacters.add(pc);
+
+		pc = new PlayerCharacter("images/fighter_100.png");
+		pc.setHitPoints(10);
+		pc.setCharacterName("Frodo");
+		map.placeMapObject(pc, 6, 6);
+		playerCharacters.add(pc);
+		*/
+	}
+
+	@Override
+	public void onUpdate(float deltaSeconds) {
+		// TODO Auto-generated method stub
+		
+		CameraMgr.get().update(deltaSeconds);
+
+		if (!enemiesAlive()) {
+			if (playersAlive()) {
+				// victory!
+				MapMgr.get().goToMap(parentMapName, null);
+				ModeMgr.get().popMode(this);
+				if (encounter != null) {
+					encounter.setComplete(true);
+				}
+
+				int gold = 50;
+				int experience = 40;
+				
+				Party.get().addGold(gold);
+				Party.get().addExperience(experience);
+				
+				String successText="You have prevailed over your enemies.\n \n";
+				if (gold > 0) {
+					successText += "You have earned "+gold+" gold.\n \n";
+				}
+				if (experience > 0) {
+					successText += "You have earned "+experience+" experience.\n \n";
+				}
+				AlertMode welcome = new AlertMode()
+				.setAlertText(successText)
+				.setBackgroundColor(0xff408040);
+				welcome.render();
+				ModeMgr.get().pushMode(welcome);
+				return;
+			}
+		}
+		
+		if (!playersAlive()) {
+			// failure!
+			MapMgr.get().goToMapAndRespawn(parentMapName);
+			ModeMgr.get().popMode(this);
+			
+			String successText="Your party has been defeated. You limp back to camp.";
+			AlertMode welcome = new AlertMode()
+			.setAlertText(successText)
+			.setBackgroundColor(0xff804040);
+			welcome.render();
+			ModeMgr.get().pushMode(welcome);
+			return;
+		}
+		
+		
+		for (Combatant c : getCombatants()) {
+			if (!c.isAlive()) {
+				continue;
+			}
+			
+			Command cmd = c.getCommand(); 
+			if (cmd == null) {
+				if (c.hasBrain()) {
+					Vec2i activePos= c.getPosition();
+					Location loc = MapMgr.get().getCurrentMap().getLocation(activePos);
+					log().info("interpolating to "+activePos.toString());
+					CameraMgr.get().interpolateTo(loc.getWorldPos(), 0.5f, CameraMgr.InterpolationStyle.EASE_OUT_QUAD);
+					cmd = c.selectCombatAction(this);
+					c.setCommand(cmd);
+				} else {
+					wfcMode.setActiveCharacter(c);
+					ModeMgr.get().pushMode(wfcMode);
+				}
+				return;
+			}
+			LongRunningJob j = c.getAnimationJob(); 
+			if (j != null && !j.isComplete()) {
+				log().info("waiting for anim "+c);
+				animMode.setActiveCharacter(c);
+				ModeMgr.get().pushMode(animMode);
+				return;
+			}
+		}
+		
+		// everybody's done, start over
+		
+		for (Combatant c : getCombatants()) {
+			c.setCommand(null);
+		}
+	}
+
+	private ArrayList<Combatant> getCombatants() {
+		ArrayList<Combatant> ret = new ArrayList<Combatant>();
+		
+		ret.addAll(enemies);
+		ret.addAll(playerCharacters);
+		
+		return ret;
+	}
+
+	@Override
+	public void onPaint(float alpha) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onMouseDown(ButtonEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onPointerStart(Event event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public ArrayList<Combatant> getEnemies(Combatant fighter) {
+		ArrayList<Combatant> enemies = new ArrayList<Combatant>();
+		
+		for (Combatant c : getCombatants()) {
+			if (fighter.opposed(c)) {
+				enemies.add(c);
+			}
+		}
+		return enemies;
+	}
+
+	private boolean enemiesAlive() {
+		for (Combatant e : enemies) {
+			if (e.isAlive()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean playersAlive() {
+		for (Combatant e : playerCharacters) {
+			if (e.isAlive()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+}

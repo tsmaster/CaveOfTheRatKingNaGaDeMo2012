@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=rpg-core/src\/main\/java&lt;com.bigdicegames.nagademo2012.core.map{GameMap.java[GameMap" modifiers="1" timestamp="1340770784000"/>
+<typeInfo handle="=rpg-core/src\/main\/java&lt;com.bigdicegames.nagademo2012.core.map{MapObject.java[MapObject" modifiers="1" timestamp="1340481783000"/>
+<typeInfo handle="=rpg-core/src\/main\/java&lt;com.bigdicegames.nagademo2012.core.map{LongRunningJob.java[LongRunningJob" modifiers="513" timestamp="1339975753000"/>
+<typeInfo handle="=rpg-core/src\/main\/java&lt;com.bigdicegames.nagademo2012.core.map.mapobjects.combat.brains{CombatBrain.java[CombatBrain" modifiers="513" timestamp="1340457327000"/>
+<typeInfo handle="=rpg-core/src\/main\/java&lt;com.bigdicegames.nagademo2012.core.characters{BaseCharacter.java[BaseCharacter" modifiers="1" timestamp="1341024980000"/>
+<typeInfo handle="=rpg-core/src\/main\/java&lt;com.bigdicegames.nagademo2012.core.modes{GameMode.java[GameMode" modifiers="513" timestamp="1340857274000"/>
+</typeInfoHistroy>

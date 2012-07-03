@@ -1,0 +1,6 @@
+#Mon Jun 18 08:36:40 PDT 2012
+versionForLastForcedRebuild_rpg-flash=2.6.1.v201205091048-rel-r37
+versionForLastForcedRebuild_rpg-html=2.6.1.v201205091048-rel-r37
+addedNewWizardActions1.2_org.eclipse.jdt.ui.JavaPerspective=com.google.gdt.eclipse.suite.wizards.newProjectWizard|com.google.gwt.eclipse.core.newModuleWizard|com.google.gwt.eclipse.core.newHostPageWizard|com.google.gwt.eclipse.core.newEntryPointWizard|com.google.gwt.eclipse.core.newClientBundleWizard|com.google.gwt.eclipse.core.newUiBinderWizard
+SdkRegistrants_1317488406478=com.google.appengine.eclipse.sdkbundle_1.6.6,com.google.gwt.eclipse.sdkbundle_2.4.0.v201205091048-rel-r37
+eclipse.preferences.version=1

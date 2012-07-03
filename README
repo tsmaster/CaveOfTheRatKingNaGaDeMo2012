@@ -1,0 +1,35 @@
+		       The Cave of the Rat King
+			   By Dave LeCompte
+	    A Turn Based Party Oriented Role Playing Game
+			Developed in June 2012
+	  For National Game Development Month (NaGaDeMo2012)
+
+
+National Game Development Month, like National Novel Writing Month, is
+an opportunity for people that have had a project haunting them for a
+while to focus on getting something done in one month's time. That's a
+long enough timeframe to get something impressive completed, but it's
+short enough to make a commitment and follow through on it. I've heard
+that it takes around 6 weeks to form a habit, so if you can make a
+game in a month, you can make a habit of making games in your spare
+time.
+
+I've wanted to make a throwback RPG for a while, and NaGaDeMo2012
+kicked me into action. What you see here is the product of that
+month. A bare-bones, minimal UI game, but a playable game with a
+structure that encourages adding more complex systems to really come
+into its own.
+
+This game is also a demonstration of the capabilities of PlayN, a game
+framework that targets Java, Android, HTML5/JavaScript, Flash, and
+iOS. During development, I focused on the Java build, as that's the
+easiest to iterate on. I periodically tested the HTML and Android
+builds. I have not seen the game running on iOS or Flash, so I cannot
+report if it works, but I would not be surprised that it does.
+
+Gameplay: 
+Explore the island, exterminating ratmen that have infested your
+home. If you get injured, go to the healer to treat your wounds. As
+you accumulate cash and loot, you can trade them for better gear at
+the Weapon Shoppe. Venture into the Ratskellar and down into the
+dungeon to face the Rat King.

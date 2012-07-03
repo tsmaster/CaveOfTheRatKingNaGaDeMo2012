@@ -1,0 +1,37 @@
+{
+  "lines": [
+    ".................",
+    ".ESSSSSSSSSSSSSS.",
+    ".SSSSSSSSSSSSSSS.",
+    ".S...SSSSSSS...S.",
+    ".S.2.SSSSSSS.3.S.",
+    ".SSSSSS.1.SSSSSS.",
+    ".SSSSSS...SSSSSS.",
+    ".SSSSSSSSSSSSSSS.",
+    ".SSSSSSSSSSSSSSS.",
+    "................."
+  ],
+  
+  "objects": [{"type": "portal",
+               "name": "ratskellar",
+               "dest_x": 1,
+               "dest_y": 2,
+               "map_marker": "1",
+               "icon": "city"},
+              {"type": "shop",
+               "name": "garths",
+               "map_marker": "2",
+               "icon": "city"},               
+              {"type": "shop",
+               "name": "healerie",
+               "map_marker": "2",
+               "icon": "city"},               
+              {"type": "portal",
+               "name": "overland",
+               "dest_x" : 21,
+               "dest_y" : 4,
+               "map_marker": "E",
+               "icon": "city"}
+               ]
+  
+}

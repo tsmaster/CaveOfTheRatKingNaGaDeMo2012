@@ -1,0 +1,138 @@
+package com.bigdicegames.nagademo2012.core.characters;
+
+import static playn.core.PlayN.log;
+
+import com.bigdicegames.nagademo2012.core.map.mapobjects.combat.PlayerCharacter;
+
+public class BaseCharacter {
+	
+	public enum Armor {
+		CLOTH(0),
+		LEATHER(2),
+		STUDDED(3),
+		CHAIN(5),
+		PLATE(8);
+		
+		public int armorClass;
+		Armor(int armorClass) {
+			this.armorClass = armorClass;
+		}
+	};
+	
+	public enum Weapon {
+		DAGGER(4, 1, 1, 1, 0),
+		MACE(6, 1, 1, 1, 0),
+		SWORD(8, 1, 0, 1, 0),
+		AXE(10, 1, 0, 0, 0),
+		BOW(6, 1, 0, 1, 1),
+		STAFF(8, 1, 1, 1, 0);
+		
+		public int damageDie;
+		public int useFighter;
+		public int useMage;
+		public int useRanger;
+		public int canFire;
+
+		Weapon(int damage, int f, int m, int r, int fire) {
+			damageDie = damage;
+			useFighter = f;
+			useMage = m;
+			useRanger = r;
+			canFire = fire;
+		}
+	}
+	
+	private String name;
+	private int currentHitPoints;
+	protected int experiencePoints;
+	private Armor armorType;
+	private Weapon weaponType;
+
+	public BaseCharacter() {
+		resetHitPoints();
+	}
+	
+	public BaseCharacter setName(String name) {
+		this.name = name;
+		return this;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getClassName() {
+		return "Base";
+	}
+	
+	public void addHitPoints(int hitPoints) {
+		this.currentHitPoints = Math.min(getMaxHitPoints(), Math.max(0, currentHitPoints+hitPoints));
+	}
+	
+	public void addExperiencePoints(int expPoints) {
+		int oldLevel = getLevel();
+		this.experiencePoints += expPoints;
+		int newLevel = getLevel();
+		if (newLevel > oldLevel) {
+			resetHitPoints();
+		}
+		log().info(name + " Exp: " + experiencePoints + " Lvl: " + newLevel);
+	}
+
+	public void resetHitPoints() {
+		currentHitPoints = getMaxHitPoints();
+	}
+
+	public boolean isAlive() {
+		return currentHitPoints > 0;
+	}
+	
+	public int getMaxHitPoints() {
+		return 10;
+	}
+	
+	public int getCurrentHitPoints() {
+		return currentHitPoints;
+	}
+	
+	public int getLevel() {
+		return experiencePoints / 1000 + 1;
+	}
+	
+	public int getToHit() {
+		return 10;
+	}
+	
+	public int getSpellPoints() {
+		return 0;
+	}
+	
+	public Armor getArmorType() {
+		return armorType;
+	}
+	
+	public BaseCharacter setArmorType(Armor a) {
+		armorType = a;
+		return this;
+	}
+
+	public Weapon getWeaponType() {
+		return weaponType;
+	}
+	
+	public BaseCharacter setWeaponType(Weapon w) {
+		weaponType = w;
+		return this;
+	}
+
+	public PlayerCharacter makeGuy() {
+		PlayerCharacter pc;
+		pc = new PlayerCharacter(this);
+		pc.setCharacterName(getName());
+		return pc;
+	}
+
+	public String getIconFilename() {
+		return "images/guy_100.png";
+	}
+}

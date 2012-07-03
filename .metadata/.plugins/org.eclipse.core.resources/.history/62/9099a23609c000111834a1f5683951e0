@@ -1,0 +1,24 @@
+package com.bigdicegames.nagademo2012.core.map.mapobjects;
+
+import com.bigdicegames.nagademo2012.core.map.MapObject;
+import com.bigdicegames.nagademo2012.core.modes.ModeMgr;
+import com.bigdicegames.nagademo2012.core.modes.ShopMode;
+
+public class HealerMapObject extends MapObject {
+	private String name;
+
+	public HealerMapObject(String shopName) {
+		super(null);
+		this.name = shopName;
+	}
+	
+	@Override
+	protected void isLandedOn(MapObject partyObject) {
+		ModeMgr.get().pushMode(new ShopMode());
+	}
+	
+	@Override
+	public boolean stopsMovement() {
+		return true;
+	}
+}
